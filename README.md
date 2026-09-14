@@ -143,19 +143,6 @@ round-robin order across project, deployment, date, time band, and coarse
 visual-condition strata. See `metadata/build_report.json` for exact counts and
 `metadata/selection_manifest.csv` for an auditable row per image.
 
-## Reproduce the curation
-
-With access to the private Fishbox source tree:
-
-```bash
-python scripts/build_dataset.py \
-  --fishbox-root /home/jeff/fishbox \
-  --output /path/to/TalTech-Fish-Debris-Hackathon-v1.0.0 \
-  --repo-metadata metadata
-```
-
-The source tree and the generated dataset are never modified in place.
-
 ## Responsible use and limitations
 
 This dataset is intended for research, education, benchmarking, and prototype
