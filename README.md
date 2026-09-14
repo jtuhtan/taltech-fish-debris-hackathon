@@ -1,125 +1,165 @@
-# Telling Fish from Drifting Debris in Underwater Monitoring Videos
+<p align="center">
+  <img src="docs/examples/fish-school.png" width="100%" alt="Several fish swimming through an underwater monitoring scene">
+</p>
 
-An open, curated computer-vision dataset for the **EIT Water HACKATHON Munich
-2026** challenge brought by I AM HYDRO and Tallinn University of Technology
-(TalTech). It supports experiments that reduce false triggers in continuous
-underwater fish monitoring at fish passages and river barriers.
+<h1 align="center">🐟 Telling Fish from Drifting Debris</h1>
 
-The dataset contains fish bounding boxes and reviewed hard-negative frames
-covering multiple capture dates, times of day, deployments, lighting levels,
-contrast levels, texture levels, and underwater color casts. Nearby frames are
-kept in the same split to reduce temporal leakage.
+<p align="center">
+  <strong>Can your AI find the fish without chasing every leaf?</strong><br>
+  An open computer-vision challenge for real-world river monitoring.
+</p>
 
-Version 1.0.0 contains **1,200 images**, **1,291 fish bounding boxes**, and
-**300 reviewed hard-negative frames**. It covers 13 dates from 10 June 2025 to
-24 July 2026 and includes dawn, day, dusk, and night imagery.
+<p align="center">
+  <a href="https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026"><img alt="EIT Water Hackathon Munich 2026" src="https://img.shields.io/badge/EIT_Water_Hackathon-Munich_2026-005EB8?style=for-the-badge"></a>
+  <img alt="Dataset version 1.0.0" src="https://img.shields.io/badge/dataset-v1.0.0-00A6A6?style=for-the-badge">
+  <a href="DATA_LICENSE.md"><img alt="Dataset licence CC BY 4.0" src="https://img.shields.io/badge/data-CC_BY_4.0-2E8B57?style=for-the-badge"></a>
+  <a href="LICENSE"><img alt="Code licence MIT" src="https://img.shields.io/badge/code-MIT-555555?style=for-the-badge"></a>
+</p>
 
-## Start here
+<p align="center">
+  <a href="https://livettu-my.sharepoint.com/:f:/g/personal/jetuht_taltech_ee/IgD0VZa1wK0YTpnOH-FoSc7tAdqcC-dW5Tcx4iYphl73uhk"><strong>⬇️ Download dataset</strong></a>
+  &nbsp;•&nbsp;
+  <a href="CHALLENGE_GUIDE.md"><strong>🚀 Start building</strong></a>
+  &nbsp;•&nbsp;
+  <a href="SCORING.md"><strong>🏆 See the scoring</strong></a>
+  &nbsp;•&nbsp;
+  <a href="SUBMISSION_TEMPLATE.md"><strong>📦 Prepare submission</strong></a>
+</p>
 
-1. Read the [participant guide](CHALLENGE_GUIDE.md).
-2. Download the data and check the file hashes.
-3. Train with `train`, choose settings with `validation`, and use `test` only
-   for the final result.
-4. Read the exact [scoring rules](SCORING.md).
-5. Copy the [submission template](SUBMISSION_TEMPLATE.md) into your project and
-   complete every field.
+---
 
-## Download
+## The mission
 
-The dataset folder is hosted on OneDrive because the image payload is too
-large for a regular Git repository. OneDrive can download the complete folder
-as a ZIP archive.
+Underwater cameras help show whether fish passages at hydropower plants and
+river barriers really work. The cameras run continuously—but leaves, twigs,
+bubbles, sediment, glare, and moving plants can all look like fish to a motion
+detector.
 
-**[Download the complete dataset from OneDrive](https://livettu-my.sharepoint.com/:f:/g/personal/jetuht_taltech_ee/IgD0VZa1wK0YTpnOH-FoSc7tAdqcC-dW5Tcx4iYphl73uhk)**
+That can create thousands of false events per station, per day.
 
-The public read-only link requires no sign-in. TalTech's organizational policy
-requires anonymous links to expire; this link is valid through **13 March
-2027**.
+> **Your challenge:** build a small proof of concept that finds real fish,
+> rejects drifting debris and noise, and can run efficiently near the camera.
 
-After downloading, verify files against `SHA256SUMS` in the release folder.
+This challenge is brought by **I AM HYDRO** and **Tallinn University of
+Technology (TalTech)** for the
+[EIT Water HACKATHON Munich 2026](https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026).
 
-## Hackathon
+## Dataset at a glance
 
-- **Event:** [EIT Water HACKATHON Munich 2026](https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026)
-- **Date and time:** 28 September 2026, 10:00–19:00
-- **Venue:** Gewerbehof Ostbahnhof, Haagerstr. 5-11, 80339 München, Germany
-- **Format:** One-day innovation sprint with at least 30 participants and six
-  cross-sector, cross-country teams
-- **Focus:** Water circularity, ecosystem protection, climate resilience, and
-  the blue economy in Central and Alpine Europe
-- **Challenge owners:** I AM HYDRO and Tallinn University of Technology
-  (TalTech)
-- **Organized by:** DEEP Ecosystems as part of the EIT Water & PDJF HACKATHON
-  pilot; an official side-event of the Bits & Pretzels Festival
+| 🖼️ Images | 🐟 Fish boxes | 🍂 Hard negatives | 📅 Dates | 🌗 Conditions |
+| ---: | ---: | ---: | ---: | --- |
+| **1,200** | **1,291** | **300** | **13** | Dawn, day, dusk, night |
 
-The event expects early-stage proofs of concept—not slide-only proposals—such
-as working experiments, mockups, user journeys, and quick feasibility checks.
-The working language is English.
+| Split | Images | Fish-positive | No-fish | Fish boxes |
+| --- | ---: | ---: | ---: | ---: |
+| Train | 840 | 630 | 210 | 938 |
+| Validation | 180 | 135 | 45 | 184 |
+| Test | 180 | 135 | 45 | 169 |
 
-## Example scenes
+The images cover multiple cameras, dates, lighting levels, water conditions,
+backgrounds, and colour casts. Nearby frames stay in the same split to reduce
+data leakage.
 
-These unedited training images show why the task is difficult. Fish may be
-small, partly hidden, or seen against plants. A no-fish frame can contain an
-object that looks like a fish. Yellow circles and camera text are part of the
-original recordings, not dataset labels.
+## Fish or false alarm?
 
-| Fish examples | No-fish hard negatives |
+These are unchanged images from the training split. Yellow circles and camera
+text are part of the original recordings, not dataset labels.
+
+| ✅ Fish | 🍂 No fish: leaf-like material |
 | --- | --- |
 | ![Several fish among underwater plants](docs/examples/fish-school.png) | ![A leaf-like object and underwater plants in a reviewed no-fish frame](docs/examples/leaf-like-debris.png) |
-| Several fish, with different sizes and contrast. | A leaf-like object and plants. No fish is annotated. |
-| ![One fish in a bright, low-contrast underwater scene](docs/examples/fish-single.png) | ![Suspended particles in a dark reviewed no-fish frame](docs/examples/suspended-particles.png) |
-| One fish in uneven light. | Suspended particles and changing light. No fish is annotated. |
+| Several fish at different sizes and contrast levels. | A leaf-like object and plants, but no annotated fish. |
 
-The examples are copied from the training split. The negative data have only a
-frame-level `no_fish` review, so the captions describe visible conditions; they
-do not add new object-level debris labels.
+| ✅ Fish | 💨 No fish: particles and changing light |
+| --- | --- |
+| ![One fish in a bright low-contrast underwater scene](docs/examples/fish-single.png) | ![Suspended particles in a dark reviewed no-fish frame](docs/examples/suspended-particles.png) |
+| One fish against uneven light. | Suspended particles and glare, but no annotated fish. |
 
-## Challenge
+> [!IMPORTANT]
+> `no_fish` is a reviewed frame-level label. The negative images are not
+> annotated with separate object classes such as `leaf`, `bubble`, or `twig`.
+> The captions above describe what is visible; they do not add new labels.
 
-I AM HYDRO develops and operates AI-supported underwater camera systems for
-monitoring fish passage facilities at hydropower plants and other river
-barriers. Cameras record continuously and trigger events using motion and image
-analysis. In real rivers, leaves, twigs, drifting debris, sediment plumes, and
-air bubbles cause many false detections—especially after rainfall and high-flow
-events, precisely when fish migration peaks.
+## Build it in four moves
 
-A single station can generate thousands of events per day, most of them false
-triggers that require manual review. This limits how affordable and scalable
-camera-based fish monitoring can become, even as regulation increasingly
-requires evidence that fish passages work.
+| 1. Explore 🔎 | 2. Build 🛠️ | 3. Prove 📊 | 4. Pitch 🎤 |
+| --- | --- | --- | --- |
+| Study fish and no-fish scenes. | Train a detector and reduce false alarms. | Test accuracy, speed, memory, and model size. | Show a working demo, a failure, and your next step. |
 
-The challenge is to explore modern computer-vision and edge-AI concepts that
-reliably distinguish fish from drifting debris and noise under real-world river
-conditions, reducing false positives and making large-scale automated
-ecological monitoring feasible.
+### Quick start
 
-## What participants should build
+1. **[Download the complete dataset](https://livettu-my.sharepoint.com/:f:/g/personal/jetuht_taltech_ee/IgD0VZa1wK0YTpnOH-FoSc7tAdqcC-dW5Tcx4iYphl73uhk).**
+   The public read-only link needs no sign-in and is valid through **13 March
+   2027** under TalTech's anonymous-link policy.
+2. Check the downloaded files against `metadata/SHA256SUMS`.
+3. Read the [participant guide](CHALLENGE_GUIDE.md).
+4. Train with `train` and choose settings with `validation`.
+5. Freeze your system before the final `test` run.
+6. Report results using the [submission template](SUBMISSION_TEMPLATE.md).
 
-Build a small proof of concept that takes an underwater image and returns fish
-bounding boxes with confidence scores. It should avoid returning boxes for
-leaves, plants, particles, bubbles, glare, and other no-fish scenes. A useful
-entry can be a notebook, command-line program, small application, or edge-device
-demo, but it must be possible for the judges to run or inspect it.
+Install the tools in this repository when you are ready to validate or score
+results:
 
-The main benchmark is objective and uses the same test images, thresholds, and
-box-matching rules for every team. Judges also consider speed, model size,
-reproducibility, real-world usefulness, and the clarity of the demo. See the
-[participant guide](CHALLENGE_GUIDE.md) for the workflow and the
-[scoring rules](SCORING.md) for the 100-point rubric.
+```bash
+git clone https://github.com/jtuhtan/taltech-fish-debris-hackathon.git
+cd taltech-fish-debris-hackathon
+python -m pip install -r requirements.txt
+```
 
-## Task and labels
+## What should you build?
 
-- `fish`: bounding-box annotation for a visible fish.
-- `no_fish`: a reviewed frame-level hard negative, represented by an empty
-  YOLO label file. These frames may contain drifting debris, bubbles, sediment,
-  changing illumination, or no moving target.
+Create a model or application that takes an underwater image and returns a
+bounding box and confidence score for each fish. A no-fish image should
+normally return no boxes.
 
-Important: the negative frames have not been subclassified into debris types.
-Do not treat them as object-level “debris” annotations.
+Your proof of concept can be a:
 
-## Formats
+- notebook or training experiment;
+- command-line inference tool;
+- small web or desktop demo;
+- model optimised for an edge device; or
+- useful combination of detection, filtering, and event review.
 
-The archive contains:
+The judges must be able to run or inspect the result. Pretrained models and
+outside data are allowed when clearly declared.
+
+## How judging works
+
+Every eligible entry is scored out of **100 points**.
+
+| Area | Points | Main question |
+| --- | ---: | --- |
+| 🎯 Model performance | **60** | Does it find fish and reject false alarms? |
+| ⚡ Edge readiness | **15** | Is it fast, small, and practical near a camera? |
+| 🔁 Reproducibility | **10** | Can another person run and understand it? |
+| 🌍 Real-world value | **10** | Is the idea useful and feasible? |
+| 🎤 Demo | **5** | Does the team show clear evidence and limitations? |
+
+The scored model metrics include fish F2, no-fish rejection, COCO mAP50:95,
+and performance across times of day. The operating point is fixed at confidence
+`0.25` and IoU `0.50` so teams are compared fairly.
+
+**[Read the full scoring formula, judging process, and tie-breaks →](SCORING.md)**
+
+## Hackathon day
+
+| | |
+| --- | --- |
+| **Event** | [EIT Water HACKATHON Munich 2026](https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026) |
+| **When** | 28 September 2026, 10:00–19:00 |
+| **Where** | Gewerbehof Ostbahnhof, Haagerstr. 5-11, 80339 München, Germany |
+| **Format** | One-day innovation sprint; working language is English |
+| **Challenge owners** | I AM HYDRO and TalTech |
+| **Organiser** | DEEP Ecosystems |
+
+The goal is an early-stage proof of concept: a working experiment, mockup,
+user journey, or quick feasibility check. It does not need to be a finished
+commercial product.
+
+<details>
+<summary><strong>Dataset files and formats</strong></summary>
+
+COCO, YOLO, and Fishbox annotations are included.
 
 ```text
 images/{train,validation,test}/
@@ -131,27 +171,48 @@ metadata/build_report.json
 data.yaml
 ```
 
-COCO and YOLO labels are provided. Bounding boxes are clamped to the image
-extent during export. Each `frame_id` is `f-` plus the first 12 hexadecimal
-characters of the SHA-256 digest of the complete source image.
+- `fish`: bounding-box annotation for a visible fish.
+- `no_fish`: reviewed hard-negative frame, represented by an empty YOLO label
+  file.
+- Each `frame_id` starts with `f-` and uses the first 12 hexadecimal characters
+  of the complete image's SHA-256 digest.
+- Exported bounding boxes are clamped to the image boundary.
 
-## Split policy
+</details>
 
-The deterministic 70/15/15 split is made by capture source and 10-minute time
-window, so adjacent frames do not cross splits. The curation script samples in
-round-robin order across project, deployment, date, time band, and coarse
-visual-condition strata. See `metadata/build_report.json` for exact counts and
-`metadata/selection_manifest.csv` for an auditable row per image.
+<details>
+<summary><strong>Split and curation policy</strong></summary>
 
-## Responsible use and limitations
+The deterministic 70/15/15 split groups images by capture source and 10-minute
+time window. Adjacent frames therefore do not cross splits. Selection covers
+project, deployment, date, time band, and coarse visual-condition groups.
 
-This dataset is intended for research, education, benchmarking, and prototype
-development. Conditions come from a limited number of camera deployments and
-should not be assumed to represent every river, species, season, camera, or
-hydraulic regime. A model that performs well here still requires site-specific
-validation before operational ecological monitoring.
+See `metadata/build_report.json` for exact counts and
+`metadata/selection_manifest.csv` for one auditable row per image.
 
-## License
+</details>
 
-Dataset files are CC BY 4.0; see [DATA_LICENSE.md](DATA_LICENSE.md). Curation
-code is MIT-licensed; see [LICENSE](LICENSE).
+<details>
+<summary><strong>Responsible use and limitations</strong></summary>
+
+This dataset is for research, education, benchmarking, and prototype
+development. It comes from a limited number of camera deployments and does not
+represent every river, species, season, camera, or flow condition. A strong
+benchmark result still needs site-specific testing before operational use.
+
+See the [dataset card](DATASET_CARD.md) for more detail.
+
+</details>
+
+## Open data, open ideas
+
+The images and annotations are released under
+[Creative Commons Attribution 4.0](DATA_LICENSE.md). The supporting code is
+released under the [MIT License](LICENSE).
+
+If you improve the documentation or tools, contributions are welcome—see
+[CONTRIBUTING.md](CONTRIBUTING.md).
+
+<p align="center">
+  <strong>Protect fish passage. Reduce false alarms. Build something that can work in the river. 🌊</strong>
+</p>
