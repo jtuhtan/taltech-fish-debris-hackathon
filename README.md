@@ -2,12 +2,10 @@
   <img src="docs/brand/readme-header.svg" width="100%" alt="Telling Fish from Drifting Debris in Underwater Monitoring Videos — EIT Water Hackathon Munich 2026">
 </p>
 
-<h1 align="center">Telling Fish from Drifting Debris in Underwater Monitoring Videos</h1>
-
 <p align="center">
-  <a href="https://iamhydro.com/"><img src="docs/brand/iamhydro.png" width="360" alt="I AM HYDRO"></a>
+  <a href="https://iamhydro.com/"><img src="docs/brand/iamhydro.png" width="360" align="middle" alt="I AM HYDRO"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://taltech.ee/en"><img src="docs/brand/taltech.png" width="145" alt="Tallinn University of Technology, TalTech"></a>
+  <a href="https://taltech.ee/en"><img src="docs/brand/taltech.png" width="145" align="middle" alt="Tallinn University of Technology, TalTech"></a>
 </p>
 
 <p align="center"><sub>Challenge owners: I AM HYDRO and Tallinn University of Technology (TalTech)</sub></p>
