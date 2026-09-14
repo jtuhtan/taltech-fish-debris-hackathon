@@ -118,6 +118,18 @@ Create a model or application that takes an underwater image and returns a
 bounding box and confidence score for each fish. A no-fish image should
 normally return no boxes.
 
+### Two example outputs
+
+| Fish input | No-fish input |
+| --- | --- |
+| ![One fish in an underwater monitoring frame](docs/examples/fish-single.png) | ![Leaf-like material in a reviewed no-fish frame](docs/examples/leaf-like-debris.png) |
+| **Expected:** one fish prediction. The ground-truth COCO box is `[102.057, 606.313, 252.548, 89.908]`. | **Expected:** no predictions, represented as `[]`. |
+| `[{"bbox": [102.057, 606.313, 252.548, 89.908], "score": 0.91}]` | `[]` |
+
+COCO boxes use `[x, y, width, height]` in pixels. The example score `0.91` is
+only illustrative: participants' models must produce their own confidence
+scores. The dataset provides the ground-truth box, not a model confidence.
+
 Your proof of concept can be a:
 
 - notebook or training experiment;
