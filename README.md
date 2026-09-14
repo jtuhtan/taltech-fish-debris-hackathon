@@ -122,13 +122,15 @@ normally return no boxes.
 
 | Fish input | No-fish input |
 | --- | --- |
-| ![One fish in an underwater monitoring frame](docs/examples/fish-single.png) | ![Leaf-like material in a reviewed no-fish frame](docs/examples/leaf-like-debris.png) |
+| ![One fish with an example bounding box and confidence score](docs/examples/fish-single-prediction.png) | ![Leaf-like material in a reviewed no-fish frame](docs/examples/leaf-like-debris.png) |
 | **Expected:** one fish prediction. The ground-truth COCO box is `[102.057, 606.313, 252.548, 89.908]`. | **Expected:** no predictions, represented as `[]`. |
 | `[{"bbox": [102.057, 606.313, 252.548, 89.908], "score": 0.91}]` | `[]` |
 
 COCO boxes use `[x, y, width, height]` in pixels. The example score `0.91` is
 only illustrative: participants' models must produce their own confidence
-scores. The dataset provides the ground-truth box, not a model confidence.
+scores. The dataset provides the ground-truth box, not a model confidence. The
+overlay is a presentation example; the original dataset image remains
+unchanged.
 
 Your proof of concept can be a:
 
