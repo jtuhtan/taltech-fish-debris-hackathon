@@ -1,8 +1,9 @@
 # Telling Fish from Drifting Debris in Underwater Monitoring Videos
 
-An open, curated computer-vision dataset for the I AM HYDRO hackathon. It
-supports experiments that reduce false triggers in continuous underwater fish
-monitoring at fish passages and river barriers.
+An open, curated computer-vision dataset for the **EIT Water HACKATHON Munich
+2026** challenge brought by I AM HYDRO and Tallinn University of Technology
+(TalTech). It supports experiments that reduce false triggers in continuous
+underwater fish monitoring at fish passages and river barriers.
 
 The dataset contains fish bounding boxes and reviewed hard-negative frames
 covering multiple capture dates, times of day, deployments, lighting levels,
@@ -19,9 +20,50 @@ The dataset folder is hosted on OneDrive because the image payload is too
 large for a regular Git repository. OneDrive can download the complete folder
 as a ZIP archive.
 
-**Download link:** _added at publication time_
+**[Download the complete dataset from OneDrive](https://livettu-my.sharepoint.com/:f:/g/personal/jetuht_taltech_ee/IgD0VZa1wK0YTpnOH-FoSc7tAdqcC-dW5Tcx4iYphl73uhk)**
+
+The public read-only link requires no sign-in. TalTech's organizational policy
+requires anonymous links to expire; this link is valid through **13 March
+2027**.
 
 After downloading, verify files against `SHA256SUMS` in the release folder.
+
+## Hackathon
+
+- **Event:** [EIT Water HACKATHON Munich 2026](https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026)
+- **Date and time:** 28 September 2026, 10:00–19:00
+- **Venue:** Gewerbehof Ostbahnhof, Haagerstr. 5-11, 80339 München, Germany
+- **Format:** One-day innovation sprint with at least 30 participants and six
+  cross-sector, cross-country teams
+- **Focus:** Water circularity, ecosystem protection, climate resilience, and
+  the blue economy in Central and Alpine Europe
+- **Challenge owners:** I AM HYDRO and Tallinn University of Technology
+  (TalTech)
+- **Organized by:** DEEP Ecosystems as part of the EIT Water & PDJF HACKATHON
+  pilot; an official side-event of the Bits & Pretzels Festival
+
+The event expects early-stage proofs of concept—not slide-only proposals—such
+as working experiments, mockups, user journeys, and quick feasibility checks.
+The working language is English.
+
+## Challenge
+
+I AM HYDRO develops and operates AI-supported underwater camera systems for
+monitoring fish passage facilities at hydropower plants and other river
+barriers. Cameras record continuously and trigger events using motion and image
+analysis. In real rivers, leaves, twigs, drifting debris, sediment plumes, and
+air bubbles cause many false detections—especially after rainfall and high-flow
+events, precisely when fish migration peaks.
+
+A single station can generate thousands of events per day, most of them false
+triggers that require manual review. This limits how affordable and scalable
+camera-based fish monitoring can become, even as regulation increasingly
+requires evidence that fish passages work.
+
+The challenge is to explore modern computer-vision and edge-AI concepts that
+reliably distinguish fish from drifting debris and noise under real-world river
+conditions, reducing false positives and making large-scale automated
+ecological monitoring feasible.
 
 ## Task and labels
 

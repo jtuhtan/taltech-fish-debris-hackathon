@@ -11,3 +11,10 @@ publisher:
   name: Tallinn University of Technology (TalTech)
 license: CC-BY-4.0
 repository-code: "https://github.com/jtuhtan/taltech-fish-debris-hackathon"
+url: "https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026"
+keywords:
+  - underwater computer vision
+  - fish passage
+  - edge AI
+  - drifting debris
+  - ecological monitoring

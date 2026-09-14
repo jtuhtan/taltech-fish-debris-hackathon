@@ -5,6 +5,9 @@
 The TalTech Fish vs Drifting Debris Hackathon Dataset is a curated subset of
 human-reviewed underwater monitoring frames from Fishbox annotation projects.
 It targets binary screening and fish detection under real river conditions.
+It was prepared for the I AM HYDRO and TalTech challenge at the
+[EIT Water HACKATHON Munich 2026](https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026),
+held on 28 September 2026 at Gewerbehof Ostbahnhof in Munich.
 
 ## Composition
 
