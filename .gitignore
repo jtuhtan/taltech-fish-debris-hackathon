@@ -1,0 +1,5 @@
+*.zip
+*.sha256
+dataset/
+__pycache__/
+*.pyc

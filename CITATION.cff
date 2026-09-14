@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "TalTech Fish vs Drifting Debris Hackathon Dataset"
+type: dataset
+version: 1.0.0
+date-released: 2026-09-14
+authors:
+  - family-names: Tuhtan
+    given-names: Jeffrey A.
+publisher:
+  name: Tallinn University of Technology (TalTech)
+license: CC-BY-4.0
+repository-code: "https://github.com/jtuhtan/taltech-fish-debris-hackathon"

@@ -1,0 +1,95 @@
+{
+  "dataset_version": "1.0.0",
+  "seed": "taltech-hackathon-v1",
+  "selection_method": "round-robin across project/source/date/time/visual-condition strata",
+  "split_method": "capture-source and 10-minute temporal groups; deterministic 70/15/15 allocation",
+  "audit": {
+    "projects": [
+      "fish",
+      "hessen"
+    ],
+    "records_total": 7937,
+    "resolved_records": 7937,
+    "missing_records": 0,
+    "missing_frame_ids": [],
+    "duplicate_project_records_ignored": 0
+  },
+  "summary": {
+    "images": 1200,
+    "fish_positive_images": 900,
+    "hard_negative_images": 300,
+    "fish_boxes": 1291,
+    "date_range": [
+      "2025-06-10",
+      "2026-07-24"
+    ],
+    "dates": {
+      "2025-06-10": 108,
+      "2025-06-12": 76,
+      "2025-06-14": 239,
+      "2025-07-04": 81,
+      "2025-09-20": 151,
+      "2026-02-16": 35,
+      "2026-02-25": 60,
+      "2026-07-01": 125,
+      "2026-07-18": 36,
+      "2026-07-19": 70,
+      "2026-07-20": 127,
+      "2026-07-23": 57,
+      "2026-07-24": 35
+    },
+    "time_bands": {
+      "dawn": 318,
+      "day": 368,
+      "dusk": 262,
+      "night": 252
+    },
+    "projects": {
+      "fish": 1144,
+      "hessen": 56
+    },
+    "sources": {
+      "EDGE_DEVICE": 92,
+      "IAHC2407": 56,
+      "PIKE": 1052
+    },
+    "brightness_bands": {
+      "bright": 33,
+      "dark": 1,
+      "mid": 1166
+    },
+    "contrast_bands": {
+      "high": 1174,
+      "medium": 26
+    },
+    "texture_bands": {
+      "medium": 326,
+      "smooth": 874
+    },
+    "color_casts": {
+      "blue": 125,
+      "neutral": 1073,
+      "warm-brown": 2
+    },
+    "splits": {
+      "train": {
+        "images": 840,
+        "fish_positive_images": 630,
+        "hard_negative_images": 210,
+        "fish_boxes": 938
+      },
+      "validation": {
+        "images": 180,
+        "fish_positive_images": 135,
+        "hard_negative_images": 45,
+        "fish_boxes": 184
+      },
+      "test": {
+        "images": 180,
+        "fish_positive_images": 135,
+        "hard_negative_images": 45,
+        "fish_boxes": 169
+      }
+    }
+  }
+}
