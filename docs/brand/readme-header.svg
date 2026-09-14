@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title description">
+  <title id="title">Telling Fish from Drifting Debris in Underwater Monitoring Videos</title>
+  <desc id="description">EIT Water Hackathon Munich 2026 challenge banner in deep blue, cyan, and green.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#032c44"/>
+      <stop offset="0.55" stop-color="#075b83"/>
+      <stop offset="1" stop-color="#08a8d3"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="75%" cy="20%" r="75%">
+      <stop offset="0" stop-color="#35d4f2" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#35d4f2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="440" rx="34" fill="url(#background)"/>
+  <rect width="1280" height="440" rx="34" fill="url(#glow)"/>
+
+  <circle cx="1130" cy="70" r="115" fill="none" stroke="#87e8f7" stroke-opacity="0.18" stroke-width="2"/>
+  <circle cx="1130" cy="70" r="78" fill="none" stroke="#87e8f7" stroke-opacity="0.14" stroke-width="2"/>
+  <circle cx="1055" cy="350" r="165" fill="none" stroke="#87e8f7" stroke-opacity="0.12" stroke-width="2"/>
+
+  <rect x="54" y="44" width="404" height="42" rx="21" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.22"/>
+  <circle cx="78" cy="65" r="7" fill="#69dc62"/>
+  <text x="96" y="71" fill="#eafaff" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="1.5">EIT WATER HACKATHON · MUNICH 2026</text>
+
+  <text x="54" y="144" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="800">Telling Fish from</text>
+  <text x="54" y="202" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="800">Drifting Debris in Underwater</text>
+  <text x="54" y="260" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="800">Monitoring Videos</text>
+  <text x="56" y="306" fill="#c8f5ff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="500">Real river data · Computer vision · Edge AI</text>
+
+  <path d="M55 360 C120 326 187 394 254 360 S388 326 455 360 S589 394 656 360" fill="none" stroke="#63dff3" stroke-width="6" stroke-linecap="round" opacity="0.72"/>
+  <circle cx="698" cy="360" r="8" fill="#69dc62"/>
+
+  <rect x="845" y="132" width="367" height="242" rx="28" fill="#ffffff" fill-opacity="0.13" stroke="#ffffff" stroke-opacity="0.22"/>
+  <text x="882" y="178" fill="#bceffa" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CHALLENGE DETAILS</text>
+  <text x="882" y="223" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">28 SEPTEMBER 2026 · 10:00–19:00</text>
+  <line x1="882" y1="247" x2="1176" y2="247" stroke="#ffffff" stroke-opacity="0.22"/>
+  <text x="882" y="286" fill="#bceffa" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6">LOCATION</text>
+  <text x="882" y="317" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">GEWERBEHOF OSTBAHNHOF</text>
+  <text x="882" y="346" fill="#eafaff" font-family="Arial, Helvetica, sans-serif" font-size="17">MUNICH, GERMANY</text>
+
+  <rect x="0" y="424" width="1280" height="16" rx="8" fill="#57d5ed"/>
+</svg>

@@ -6,6 +6,8 @@ this challenge on the
 
 - `iamhydro.png`: I AM HYDRO logo from the event webpage
 - `taltech.png`: TalTech logo from the event webpage
+- `readme-header.svg`: repository banner based on the event webpage's deep
+  blue and cyan palette, rounded cards, green accent, and compact section labels
 
 The logos remain the property of their respective organisations. Their use
 here identifies the organisations that own this hackathon challenge; the

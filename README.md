@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/examples/fish-school.png" width="100%" alt="Several fish swimming through an underwater monitoring scene">
+  <img src="docs/brand/readme-header.svg" width="100%" alt="Telling Fish from Drifting Debris in Underwater Monitoring Videos — EIT Water Hackathon Munich 2026">
 </p>
 
 <h1 align="center">Telling Fish from Drifting Debris in Underwater Monitoring Videos</h1>
@@ -18,10 +18,10 @@
 </p>
 
 <p align="center">
-  <a href="https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026"><img alt="EIT Water Hackathon Munich 2026" src="https://img.shields.io/badge/EIT_Water_Hackathon-Munich_2026-005EB8?style=for-the-badge"></a>
-  <img alt="Dataset version 1.0.0" src="https://img.shields.io/badge/dataset-v1.0.0-00A6A6?style=for-the-badge">
-  <a href="DATA_LICENSE.md"><img alt="Dataset licence CC BY 4.0" src="https://img.shields.io/badge/data-CC_BY_4.0-2E8B57?style=for-the-badge"></a>
-  <a href="LICENSE"><img alt="Code licence MIT" src="https://img.shields.io/badge/code-MIT-555555?style=for-the-badge"></a>
+  <a href="https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026"><img alt="EIT Water Hackathon Munich 2026" src="https://img.shields.io/badge/EIT_Water-HACKATHON_2026-075B83?style=for-the-badge"></a>
+  <img alt="Dataset version 1.0.0" src="https://img.shields.io/badge/DATASET-v1.0.0-08A8D3?style=for-the-badge">
+  <a href="DATA_LICENSE.md"><img alt="Dataset licence CC BY 4.0" src="https://img.shields.io/badge/DATA-CC_BY_4.0-69B94C?style=for-the-badge"></a>
+  <a href="LICENSE"><img alt="Code licence MIT" src="https://img.shields.io/badge/CODE-MIT-032C44?style=for-the-badge"></a>
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@
 
 ---
 
-## The mission
+## 01 — The challenge
 
 Underwater cameras help show whether fish passages at hydropower plants and
 river barriers really work. The cameras run continuously—but leaves, twigs,
@@ -52,7 +52,7 @@ This challenge is brought by **I AM HYDRO** and **Tallinn University of
 Technology (TalTech)** for the
 [EIT Water HACKATHON Munich 2026](https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026).
 
-## Dataset at a glance
+## 02 — Dataset at a glance
 
 | 🖼️ Images | 🐟 Fish boxes | 🍂 Hard negatives | 📅 Dates | 🌗 Conditions |
 | ---: | ---: | ---: | ---: | --- |
@@ -68,7 +68,7 @@ The images cover multiple cameras, dates, lighting levels, water conditions,
 backgrounds, and colour casts. Nearby frames stay in the same split to reduce
 data leakage.
 
-## Fish or false alarm?
+## 03 — Fish or false alarm?
 
 These are unchanged images from the training split. Yellow circles and camera
 text are part of the original recordings, not dataset labels.
@@ -88,7 +88,7 @@ text are part of the original recordings, not dataset labels.
 > annotated with separate object classes such as `leaf`, `bubble`, or `twig`.
 > The captions above describe what is visible; they do not add new labels.
 
-## Build it in four moves
+## 04 — Build and test
 
 | 1. Explore 🔎 | 2. Build 🛠️ | 3. Prove 📊 | 4. Pitch 🎤 |
 | --- | --- | --- | --- |
@@ -114,7 +114,7 @@ cd taltech-fish-debris-hackathon
 python -m pip install -r requirements.txt
 ```
 
-## What should you build?
+## 05 — What should you build?
 
 Create a model or application that takes an underwater image and returns a
 bounding box and confidence score for each fish. A no-fish image should
@@ -131,7 +131,7 @@ Your proof of concept can be a:
 The judges must be able to run or inspect the result. Pretrained models and
 outside data are allowed when clearly declared.
 
-## How judging works
+## 06 — How judging works
 
 Every eligible entry is scored out of **100 points**.
 
@@ -149,7 +149,7 @@ and performance across times of day. The operating point is fixed at confidence
 
 **[Read the full scoring formula, judging process, and tie-breaks →](SCORING.md)**
 
-## Hackathon day
+## 07 — Hackathon day
 
 | | |
 | --- | --- |
@@ -212,7 +212,7 @@ See the [dataset card](DATASET_CARD.md) for more detail.
 
 </details>
 
-## Open data, open ideas
+## 08 — Open data, open ideas
 
 The images and annotations are released under
 [Creative Commons Attribution 4.0](DATA_LICENSE.md). The supporting code is
