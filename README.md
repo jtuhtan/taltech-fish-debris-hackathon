@@ -14,6 +14,16 @@ Version 1.0.0 contains **1,200 images**, **1,291 fish bounding boxes**, and
 **300 reviewed hard-negative frames**. It covers 13 dates from 10 June 2025 to
 24 July 2026 and includes dawn, day, dusk, and night imagery.
 
+## Start here
+
+1. Read the [participant guide](CHALLENGE_GUIDE.md).
+2. Download the data and check the file hashes.
+3. Train with `train`, choose settings with `validation`, and use `test` only
+   for the final result.
+4. Read the exact [scoring rules](SCORING.md).
+5. Copy the [submission template](SUBMISSION_TEMPLATE.md) into your project and
+   complete every field.
+
 ## Download
 
 The dataset folder is hosted on OneDrive because the image payload is too
@@ -46,6 +56,24 @@ The event expects early-stage proofs of concept—not slide-only proposals—suc
 as working experiments, mockups, user journeys, and quick feasibility checks.
 The working language is English.
 
+## Example scenes
+
+These unedited training images show why the task is difficult. Fish may be
+small, partly hidden, or seen against plants. A no-fish frame can contain an
+object that looks like a fish. Yellow circles and camera text are part of the
+original recordings, not dataset labels.
+
+| Fish examples | No-fish hard negatives |
+| --- | --- |
+| ![Several fish among underwater plants](docs/examples/fish-school.png) | ![A leaf-like object and underwater plants in a reviewed no-fish frame](docs/examples/leaf-like-debris.png) |
+| Several fish, with different sizes and contrast. | A leaf-like object and plants. No fish is annotated. |
+| ![One fish in a bright, low-contrast underwater scene](docs/examples/fish-single.png) | ![Suspended particles in a dark reviewed no-fish frame](docs/examples/suspended-particles.png) |
+| One fish in uneven light. | Suspended particles and changing light. No fish is annotated. |
+
+The examples are copied from the training split. The negative data have only a
+frame-level `no_fish` review, so the captions describe visible conditions; they
+do not add new object-level debris labels.
+
 ## Challenge
 
 I AM HYDRO develops and operates AI-supported underwater camera systems for
@@ -64,6 +92,20 @@ The challenge is to explore modern computer-vision and edge-AI concepts that
 reliably distinguish fish from drifting debris and noise under real-world river
 conditions, reducing false positives and making large-scale automated
 ecological monitoring feasible.
+
+## What participants should build
+
+Build a small proof of concept that takes an underwater image and returns fish
+bounding boxes with confidence scores. It should avoid returning boxes for
+leaves, plants, particles, bubbles, glare, and other no-fish scenes. A useful
+entry can be a notebook, command-line program, small application, or edge-device
+demo, but it must be possible for the judges to run or inspect it.
+
+The main benchmark is objective and uses the same test images, thresholds, and
+box-matching rules for every team. Judges also consider speed, model size,
+reproducibility, real-world usefulness, and the clarity of the demo. See the
+[participant guide](CHALLENGE_GUIDE.md) for the workflow and the
+[scoring rules](SCORING.md) for the 100-point rubric.
 
 ## Task and labels
 
