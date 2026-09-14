@@ -2,7 +2,15 @@
   <img src="docs/examples/fish-school.png" width="100%" alt="Several fish swimming through an underwater monitoring scene">
 </p>
 
-<h1 align="center">🐟 Telling Fish from Drifting Debris</h1>
+<h1 align="center">Telling Fish from Drifting Debris in Underwater Monitoring Videos</h1>
+
+<p align="center">
+  <a href="https://iamhydro.com/"><img src="docs/brand/iamhydro.png" width="360" alt="I AM HYDRO"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://taltech.ee/en"><img src="docs/brand/taltech.png" width="145" alt="Tallinn University of Technology, TalTech"></a>
+</p>
+
+<p align="center"><sub>Challenge owners: I AM HYDRO and Tallinn University of Technology (TalTech)</sub></p>
 
 <p align="center">
   <strong>Can your AI find the fish without chasing every leaf?</strong><br>
