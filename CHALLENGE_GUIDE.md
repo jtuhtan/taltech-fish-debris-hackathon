@@ -79,6 +79,8 @@ finds. A frame with no fish should normally return no boxes.
    fixed confidence threshold of `0.25` for the scored operating point.
 8. **Measure edge readiness.** Measure latency, memory, and model size. State
    exactly which hardware and software you used.
+9. **Submit your predictions.** Upload them with the submission form. See
+   [How to submit](#how-to-submit).
 
 ### Prediction format
 
@@ -170,6 +172,28 @@ Build the pitch around the four categories:
 3. **Business case:** who uses it, the review hours saved, and how it scales.
 4. **Team and next step:** who did what, and what you would do in a pilot.
 
+## How to submit
+
+1. Freeze your system and run it once on the `test` images.
+2. Open the [submission form](https://github.com/jtuhtan/taltech-fish-debris-hackathon/issues/new?template=submission.yml).
+3. Enter your team name and drag your predictions `.json` file into the
+   **Predictions file** box. Add your code URL and submission report if they
+   are ready.
+4. Confirm the declarations and submit the issue.
+
+Within a few minutes, a GitHub Action checks the file, scores it with the
+reference evaluator, and posts the result on your issue. The challenge owners
+are notified to review it. Results are provisional until they do.
+
+- If the check finds a format problem, edit the issue and replace the file. It
+  is checked again automatically.
+- Use the image IDs from `annotations/instances_test.json`. The validation
+  split uses the same ID numbers, so validation predictions would be scored
+  against the wrong images.
+- The repository is public, so your file and score are visible to everyone.
+  The judges see every submission and every edit, so submit once, after you
+  freeze your system.
+
 ## Minimum submission
 
 Your submission must contain:
@@ -177,7 +201,8 @@ Your submission must contain:
 - a short `README` with one command or notebook path for inference;
 - source code or a runnable notebook;
 - frozen model weights, or a public download link;
-- test predictions in standard COCO result JSON format;
+- test predictions in standard COCO result JSON format, uploaded with the
+  submission form;
 - a completed report based on [SUBMISSION_TEMPLATE.md](SUBMISSION_TEMPLATE.md),
   covering all four categories;
 - a list of pretrained models and outside datasets used;

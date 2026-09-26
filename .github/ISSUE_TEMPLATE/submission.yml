@@ -1,0 +1,46 @@
+name: Submit test predictions
+description: Upload your test-set predictions. They are scored automatically and sent to the challenge owners for review.
+title: "[Submission] "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Upload the predictions from your **frozen** system for the **test** split. A GitHub Action checks the file, scores it with the [reference evaluator](https://github.com/jtuhtan/taltech-fish-debris-hackathon/blob/main/BENCHMARK.md), and posts the result on this issue for the challenge owners to review.
+
+        - This repository is public: your file and your score are visible to everyone.
+        - Use the image IDs from `annotations/instances_test.json`. The validation split uses the same ID numbers, so validation predictions would be scored against the wrong images.
+        - Submit once, after you freeze your system. The judges see every submission and every edit.
+  - type: input
+    id: team
+    attributes:
+      label: Team name
+    validations:
+      required: true
+  - type: textarea
+    id: predictions
+    attributes:
+      label: Predictions file
+      description: Drag and drop your predictions file in COCO result format (`.json`, up to 25 MB) into this box. Attach exactly one file.
+      placeholder: Drop predictions.json here
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Code URL
+      placeholder: https://github.com/your-team/your-repo
+  - type: textarea
+    id: report
+    attributes:
+      label: Submission report
+      description: Attach or link your completed SUBMISSION_TEMPLATE.md, if it is ready.
+  - type: checkboxes
+    id: declarations
+    attributes:
+      label: Declarations
+      options:
+        - label: We did not train on, tune on, manually relabel, or select settings from the test labels.
+          required: true
+        - label: We understand that this issue, our file, and our score are public.
+          required: true

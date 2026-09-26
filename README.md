@@ -30,6 +30,8 @@
   <a href="SCORING.md"><strong>🏆 How judging works</strong></a>
   &nbsp;•&nbsp;
   <a href="SUBMISSION_TEMPLATE.md"><strong>📦 Prepare submission</strong></a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/jtuhtan/taltech-fish-debris-hackathon/issues/new?template=submission.yml"><strong>📤 Submit predictions</strong></a>
 </p>
 
 ---
@@ -123,7 +125,9 @@ time for the rest.
 3. Read the [participant guide](CHALLENGE_GUIDE.md).
 4. Train with `train` and choose settings with `validation`.
 5. Freeze your system before the final `test` run.
-6. Report all four categories using the
+6. Upload your test predictions with the [submission form](https://github.com/jtuhtan/taltech-fish-debris-hackathon/issues/new?template=submission.yml).
+   They are scored automatically and sent to the challenge owners for review.
+7. Report all four categories using the
    [submission template](SUBMISSION_TEMPLATE.md).
 
 Install the tools in this repository when you are ready to validate or score
