@@ -44,6 +44,7 @@ jobs:
         env:
           TEST_GROUND_TRUTH_GZ_B64: ${{ secrets.TEST_GROUND_TRUTH_GZ_B64 }}
           RESULTS_REVIEWERS: ${{ vars.RESULTS_REVIEWERS || format('@{0}', github.repository_owner) }}
+          SUBMISSION_DEADLINE: ${{ vars.SUBMISSION_DEADLINE }}
         run: |
           gh api graphql \
             -f query='query($owner: String!, $name: String!, $number: Int!) {
@@ -67,11 +68,15 @@ jobs:
         continue-on-error: true
         env:
           STATUS: ${{ steps.score.outputs.status }}
+          LATE: ${{ steps.score.outputs.late }}
         run: |
           if [ "$STATUS" = "scored" ]; then
             gh issue edit "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --add-label scored --remove-label needs-fix
           elif [ "$STATUS" = "needs-fix" ]; then
             gh issue edit "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --add-label needs-fix --remove-label scored
+          fi
+          if [ "$LATE" = "true" ]; then
+            gh issue edit "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --add-label late
           fi
 
       - name: Keep predictions and results

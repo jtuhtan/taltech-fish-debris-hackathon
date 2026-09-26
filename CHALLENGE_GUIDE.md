@@ -21,6 +21,10 @@ to every team.
 
 ## Plan your time
 
+The submission deadline is **18:00 Munich time on 28 September 2026**, when the
+final pitches start. Pitch coaching runs from 16:15 and the tech check from
+17:00, so plan to have your predictions ready well before then.
+
 - All four categories count. Categories 3 and 4 together are half of the
   points.
 - Get a simple baseline working early. Then work in parallel: some team members
@@ -190,9 +194,11 @@ are notified to review it. Results are provisional until they do.
 - Use the image IDs from `annotations/instances_test.json`. The validation
   split uses the same ID numbers, so validation predictions would be scored
   against the wrong images.
+- The deadline is **18:00 Munich time on 28 September 2026**.
 - If you submit more than once, by editing your issue or opening a new one,
-  your **latest submission before the deadline** counts. The judges see every
-  submission and every edit.
+  your **latest submission before the deadline** counts. Versions after the
+  deadline are marked late and do not count. The judges see every submission
+  and every edit.
 - The repository is public, so your file and score are visible to everyone.
 
 ## Minimum submission
