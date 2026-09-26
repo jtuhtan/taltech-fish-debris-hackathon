@@ -117,9 +117,9 @@ What strong entries show:
 
 1. Check eligibility and required files.
 2. Measure category 2 with the [benchmark](BENCHMARK.md): review the
-   automatic evaluator result on each submission issue, re-run finalist
-   inference on a common device when practical, and score edge readiness and
-   reproducibility.
+   automatic evaluator result for each team's latest submission before the
+   deadline, re-run finalist inference on a common device when practical, and
+   score edge readiness and reproducibility.
 3. Watch the demo and pitch, and ask short questions.
 4. Score categories 1, 3, and 4 using the DEEP criteria.
 5. Rank all entries by their total DEEP score out of 100.

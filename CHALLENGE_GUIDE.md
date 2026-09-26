@@ -190,9 +190,10 @@ are notified to review it. Results are provisional until they do.
 - Use the image IDs from `annotations/instances_test.json`. The validation
   split uses the same ID numbers, so validation predictions would be scored
   against the wrong images.
+- If you submit more than once, by editing your issue or opening a new one,
+  your **latest submission before the deadline** counts. The judges see every
+  submission and every edit.
 - The repository is public, so your file and score are visible to everyone.
-  The judges see every submission and every edit, so submit once, after you
-  freeze your system.
 
 ## Minimum submission
 

@@ -10,7 +10,7 @@ body:
 
         - This repository is public: your file and your score are visible to everyone.
         - Use the image IDs from `annotations/instances_test.json`. The validation split uses the same ID numbers, so validation predictions would be scored against the wrong images.
-        - Submit once, after you freeze your system. The judges see every submission and every edit.
+        - If you submit more than once, by editing this issue or opening a new one, your **latest submission before the deadline** counts. The judges see every submission and every edit.
   - type: input
     id: team
     attributes:

@@ -127,6 +127,7 @@ time for the rest.
 5. Freeze your system before the final `test` run.
 6. Upload your test predictions with the [submission form](https://github.com/jtuhtan/taltech-fish-debris-hackathon/issues/new?template=submission.yml).
    They are scored automatically and sent to the challenge owners for review.
+   Your latest submission before the deadline counts.
 7. Report all four categories using the
    [submission template](SUBMISSION_TEMPLATE.md).
 
