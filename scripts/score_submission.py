@@ -17,6 +17,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EVALUATOR = REPO_ROOT / "scripts" / "evaluate_predictions.py"
@@ -25,6 +26,7 @@ GROUND_TRUTH_ENV = "TEST_GROUND_TRUTH_GZ_B64"
 MAX_DOWNLOAD_BYTES = 25 * 1024 * 1024
 MAX_PREDICTIONS = 100_000
 MAX_ERRORS = 10
+EVENT_TIMEZONE = ZoneInfo("Europe/Berlin")
 ATTACHMENT_URL = re.compile(
     r"https://github\.com/(?:user-attachments/files|[\w.-]+/[\w.-]+/files)"
     r"/\d+/[^\s()\[\]<>\"'`]+(?i:\.json)"
@@ -33,7 +35,8 @@ BENCHMARK_NOTE = (
     "> This is the model-performance part of the category 2 benchmark. Edge "
     "readiness and reproducibility are scored by the judges, and the overall "
     "ranking uses all four DEEP categories. Results are provisional until the "
-    "challenge owners review them."
+    "challenge owners review them. If a team submits more than once, its latest "
+    "submission before the deadline counts."
 )
 
 
@@ -208,12 +211,25 @@ def plain(text: str, limit: int = 100) -> str:
     return text.replace("@", "@\u200b")
 
 
+def event_time(moment: datetime | None) -> str:
+    if moment is None:
+        return "unknown"
+    local = moment.astimezone(EVENT_TIMEZONE).strftime("%Y-%m-%d %H:%M:%S")
+    return f"{local} Munich time ({moment.astimezone(timezone.utc):%H:%M:%S} UTC)"
+
+
+def parse_time(timestamp: str | None) -> datetime | None:
+    return datetime.fromisoformat(timestamp.replace("Z", "+00:00")) if timestamp else None
+
+
 def header(issue: dict[str, Any], fields: dict[str, str], args: argparse.Namespace) -> list[str]:
     team = plain(fields.get("Team name", "")) or "not given"
     author = (issue.get("author") or {}).get("login", "unknown")
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    submitted = event_time(parse_time(issue.get("lastEditedAt") or issue.get("createdAt")))
+    now = event_time(datetime.now(timezone.utc))
     return [
         f"- **Team:** {team} (submitted by @\u200b{author})",
+        f"- **Submitted:** {submitted}, when this issue was created or last edited",
         f"- **Checked:** {now}, confidence `{args.confidence:.2f}` and IoU `{args.iou:.2f}`",
     ]
 

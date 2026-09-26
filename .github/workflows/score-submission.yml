@@ -45,8 +45,14 @@ jobs:
           TEST_GROUND_TRUTH_GZ_B64: ${{ secrets.TEST_GROUND_TRUTH_GZ_B64 }}
           RESULTS_REVIEWERS: ${{ vars.RESULTS_REVIEWERS || format('@{0}', github.repository_owner) }}
         run: |
-          gh issue view "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" \
-            --json number,title,body,author > "$RUNNER_TEMP/issue.json"
+          gh api graphql \
+            -f query='query($owner: String!, $name: String!, $number: Int!) {
+              repository(owner: $owner, name: $name) {
+                issue(number: $number) { number title body createdAt lastEditedAt author { login } }
+              }
+            }' \
+            -F owner="${GITHUB_REPOSITORY%/*}" -F name="${GITHUB_REPOSITORY#*/}" -F number="$ISSUE_NUMBER" \
+            --jq '.data.repository.issue' > "$RUNNER_TEMP/issue.json"
           python scripts/score_submission.py \
             --issue "$RUNNER_TEMP/issue.json" \
             --workdir "$RUNNER_TEMP/submission" \
