@@ -104,7 +104,7 @@ measured` rather than leaving a field blank.
 
 Latency from different devices is not directly comparable. Teams must provide
 self-measured results, and the organisers may rerun finalists on one common
-device for the ranked score.
+device for the benchmark score.
 
 ## What makes a strong entry
 

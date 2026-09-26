@@ -74,6 +74,22 @@ output path and format.
 - No-fish case:
 - Failure case:
 
+## Climate & ecological impact
+
+- How the system behaves on debris-heavy, low-contrast, or night frames, as a
+  proxy for floods and high flow:
+- How it protects fish recall during migration peaks:
+- How it helps show that a fish pass works, for example for the EU Water
+  Framework Directive:
+- What we could not test with this dataset:
+
+## Business case & scalability
+
+- Estimated review hours saved per station per day, with assumptions:
+- Deployment and operating model (edge device, licence, or service):
+- Target users and who pays:
+- What a new site needs, and how it scales to many sites:
+
 ## Limits and next step
 
 What does not work yet? What is the most useful next improvement?
