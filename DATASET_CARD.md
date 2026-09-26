@@ -46,8 +46,8 @@ assignment groups frames from the same source and 10-minute period.
 Report fish recall, false-positive rate on hard negatives, precision-recall or
 average precision, and results separately by date, time band, and visual
 condition. Do not tune against the test split. The hackathon's fixed operating
-point, benchmark formulas, and judging criteria are defined in
-[SCORING.md](SCORING.md).
+point and benchmark formulas are defined in [BENCHMARK.md](BENCHMARK.md), and
+the judging criteria in [SCORING.md](SCORING.md).
 
 ## Privacy and sensitivity
 

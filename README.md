@@ -27,7 +27,7 @@
   &nbsp;•&nbsp;
   <a href="CHALLENGE_GUIDE.md"><strong>🚀 Start building</strong></a>
   &nbsp;•&nbsp;
-  <a href="SCORING.md"><strong>🏆 See the scoring</strong></a>
+  <a href="SCORING.md"><strong>🏆 How judging works</strong></a>
   &nbsp;•&nbsp;
   <a href="SUBMISSION_TEMPLATE.md"><strong>📦 Prepare submission</strong></a>
 </p>
@@ -45,12 +45,31 @@ That can create thousands of false events per station, per day.
 
 > **Your challenge:** build a small proof of concept that finds real fish,
 > rejects drifting debris and noise, and can run efficiently near the camera.
+> Then show why it matters for rivers and how it could work as a real service.
 
 This challenge is brought by **I AM HYDRO** and **Tallinn University of
 Technology (TalTech)** for the
 [EIT Water HACKATHON Munich 2026](https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026).
 
-## 02 — Dataset at a glance
+## 02 — How you'll be judged
+
+The overall ranking uses the official **DEEP judging criteria** for the EIT
+Water Hackathon Munich 2026. All four categories count.
+
+| DEEP category | Points | Judges ask | Show us |
+| --- | ---: | --- | --- |
+| 🌍 **Strategic Alignment & Climate Impact** | **25** | Does it help protect fish and rivers, even in floods and high flow? | Results on your hardest frames, and how it helps prove that fish passes work (EU Water Framework Directive) |
+| 🛠️ **Innovation & Technical Feasibility** | **25** | Does it work near the camera, and can others reproduce it? | Our benchmark: model performance, edge readiness, and reproducibility |
+| 📈 **Business-Readiness & Scalability** | **30** | Who uses it, how much review time does it save, and how does it scale? | Review hours saved per station, and an operating model for many sites |
+| 🎤 **Team Capabilities & Pitch Quality** | **20** | Can the team show it working and take it further? | A working demo, a fish and a no-fish case, one failure, and your next step |
+
+> [!TIP]
+> A strong model alone covers only part of category 2. Business readiness and
+> the pitch together are half of the points, so keep time for them.
+
+**[Read what judges look for in each category →](SCORING.md)**
+
+## 03 — Dataset at a glance
 
 | 🖼️ Images | 🐟 Fish boxes | 🍂 Hard negatives | 📅 Dates | 🌗 Conditions |
 | ---: | ---: | ---: | ---: | --- |
@@ -66,7 +85,7 @@ The images cover multiple cameras, dates, lighting levels, water conditions,
 backgrounds, and colour casts. Nearby frames stay in the same split to reduce
 data leakage.
 
-## 03 — Fish or false alarm?
+## 04 — Fish or false alarm?
 
 These are unchanged images from the training split. Yellow circles and camera
 text are part of the original recordings, not dataset labels.
@@ -86,11 +105,14 @@ text are part of the original recordings, not dataset labels.
 > annotated with separate object classes such as `leaf`, `bubble`, or `twig`.
 > The captions above describe what is visible; they do not add new labels.
 
-## 04 — Build and test
+## 05 — Your path through the day
 
-| 1. Explore 🔎 | 2. Build 🛠️ | 3. Prove 📊 | 4. Pitch 🎤 |
+Plan your work around the four categories. A simple baseline early leaves
+time for the rest.
+
+| 🌍 1. Understand the impact | 🛠️ 2. Build and measure | 📈 3. Make the business case | 🎤 4. Pitch |
 | --- | --- | --- | --- |
-| Study fish and no-fish scenes. | Train a detector and reduce false alarms. | Test accuracy, speed, memory, and model size. | Show a working demo, a failure, and your next step. Make the climate impact and business case. |
+| Study fish and no-fish scenes, and the hardest conditions: night, low contrast, and debris. | Train a detector, reduce false alarms, and measure accuracy, speed, memory, and size. | Estimate review hours saved and decide how the system would run at many sites. | Show a working demo, a failure, the impact, the business case, and your next step. |
 
 ### Quick start
 
@@ -101,7 +123,8 @@ text are part of the original recordings, not dataset labels.
 3. Read the [participant guide](CHALLENGE_GUIDE.md).
 4. Train with `train` and choose settings with `validation`.
 5. Freeze your system before the final `test` run.
-6. Report results using the [submission template](SUBMISSION_TEMPLATE.md).
+6. Report all four categories using the
+   [submission template](SUBMISSION_TEMPLATE.md).
 
 Install the tools in this repository when you are ready to validate or score
 results:
@@ -112,13 +135,27 @@ cd taltech-fish-debris-hackathon
 python -m pip install -r requirements.txt
 ```
 
-## 05 — What should you build?
+## 06 — What to deliver
+
+Your proof of concept has four parts, one for each category:
+
+1. 🌍 **Impact:** how your system helps protect fish and rivers, and how it
+   behaves in the hardest conditions.
+2. 🛠️ **A working detector:** a model or application, measured with our
+   [benchmark](BENCHMARK.md).
+3. 📈 **A business case:** target users, review hours saved, and an operating
+   model.
+4. 🎤 **A demo and pitch:** a working demo and a clear story, backed by your
+   [submission report](SUBMISSION_TEMPLATE.md).
+
+### The detector
 
 Create a model or application that takes an underwater image and returns a
 bounding box and confidence score for each fish. A no-fish image should
-normally return no boxes.
+normally return no boxes. Predictions are scored at a fixed operating point,
+confidence `0.25` and IoU `0.50`, so teams are compared fairly.
 
-### Two example outputs
+#### Two example outputs
 
 | Fish input | No-fish input |
 | --- | --- |
@@ -132,7 +169,7 @@ scores. The dataset provides the ground-truth box, not a model confidence. The
 overlay is a presentation example; the original dataset image remains
 unchanged.
 
-Your proof of concept can be a:
+The detector can be a:
 
 - notebook or training experiment;
 - command-line inference tool;
@@ -142,38 +179,6 @@ Your proof of concept can be a:
 
 The judges must be able to run or inspect the result. Pretrained models and
 outside data are allowed when clearly declared.
-
-## 06 — How judging works
-
-The overall ranking is decided by the official **DEEP judging criteria** for
-the EIT Water Hackathon Munich 2026, out of **100 points**.
-
-| DEEP category | Points | Main question |
-| --- | ---: | --- |
-| 🌍 Strategic Alignment & Climate Impact | **25** | Does it keep working during floods and high flow, and help prove that fish passes work? |
-| 🛠️ Innovation & Technical Feasibility | **25** | Does it work? Measured with our benchmark below. |
-| 📈 Business-Readiness & Scalability | **30** | How many review hours does it save, how does it scale, and how would it operate? |
-| 🎤 Team Capabilities & Pitch Quality | **20** | Does the team show a clear demo, honest evidence, and a convincing plan? |
-
-**Our benchmark measures category 2.** Its three parts are weighted within
-category 2:
-
-| Benchmark part | Weight | Main question |
-| --- | ---: | --- |
-| 🎯 Model performance | **60** | Does it find fish and reject false alarms? |
-| ⚡ Edge readiness | **15** | Is it fast, small, and practical near a camera? |
-| 🔁 Reproducibility | **10** | Can another person run and understand it? |
-
-The scored model metrics include fish F2, no-fish rejection, COCO mAP50:95,
-and performance across times of day. The operating point is fixed at confidence
-`0.25` and IoU `0.50` so teams are compared fairly.
-
-> [!TIP]
-> Model performance is important, but it is only part of category 2. Business
-> readiness is the largest category: bring an estimate of review hours saved
-> per station and a credible way to run your system at many sites.
-
-**[Read the DEEP categories, benchmark formula, and tie-breaks →](SCORING.md)**
 
 ## 07 — Hackathon day
 
@@ -188,7 +193,7 @@ and performance across times of day. The operating point is fixed at confidence
 
 The goal is an early-stage proof of concept: a working experiment, mockup,
 user journey, or quick feasibility check. It does not need to be a finished
-commercial product.
+commercial product, but judges look for a credible path to real use.
 
 <details>
 <summary><strong>Dataset files and formats</strong></summary>
