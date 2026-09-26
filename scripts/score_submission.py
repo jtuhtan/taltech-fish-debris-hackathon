@@ -58,6 +58,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--manifest", type=Path, default=REPO_ROOT / "metadata" / "selection_manifest.csv")
     parser.add_argument("--checksums", type=Path, default=REPO_ROOT / "metadata" / "SHA256SUMS")
     parser.add_argument("--reviewers", default=os.environ.get("RESULTS_REVIEWERS", ""))
+    parser.add_argument(
+        "--deadline",
+        default=os.environ.get("SUBMISSION_DEADLINE", ""),
+        help="ISO 8601 time; later versions are flagged as late (Munich time if no offset)",
+    )
     parser.add_argument("--confidence", type=float, default=0.25)
     parser.add_argument("--iou", type=float, default=0.50)
     return parser.parse_args()
@@ -219,19 +224,34 @@ def event_time(moment: datetime | None) -> str:
 
 
 def parse_time(timestamp: str | None) -> datetime | None:
-    return datetime.fromisoformat(timestamp.replace("Z", "+00:00")) if timestamp else None
+    if not timestamp:
+        return None
+    moment = datetime.fromisoformat(timestamp.strip().replace("Z", "+00:00"))
+    return moment if moment.tzinfo else moment.replace(tzinfo=EVENT_TIMEZONE)
 
 
-def header(issue: dict[str, Any], fields: dict[str, str], args: argparse.Namespace) -> list[str]:
+def header(issue: dict[str, Any], fields: dict[str, str], args: argparse.Namespace) -> tuple[list[str], bool]:
     team = plain(fields.get("Team name", "")) or "not given"
     author = (issue.get("author") or {}).get("login", "unknown")
-    submitted = event_time(parse_time(issue.get("lastEditedAt") or issue.get("createdAt")))
-    now = event_time(datetime.now(timezone.utc))
-    return [
+    submitted = parse_time(issue.get("lastEditedAt") or issue.get("createdAt"))
+    try:
+        deadline = parse_time(args.deadline)
+    except ValueError:
+        print(f"Ignoring invalid deadline {args.deadline!r}", file=sys.stderr)
+        deadline = None
+    late = bool(deadline and submitted and submitted > deadline)
+    lines = [
         f"- **Team:** {team} (submitted by @\u200b{author})",
-        f"- **Submitted:** {submitted}, when this issue was created or last edited",
-        f"- **Checked:** {now}, confidence `{args.confidence:.2f}` and IoU `{args.iou:.2f}`",
+        f"- **Submitted:** {event_time(submitted)}, when this issue was created or last edited",
+        f"- **Checked:** {event_time(datetime.now(timezone.utc))}, "
+        f"confidence `{args.confidence:.2f}` and IoU `{args.iou:.2f}`",
     ]
+    if late:
+        lines.append(
+            f"- ⚠️ **Late:** this version came after the deadline, {event_time(deadline)}. "
+            "It does not count. The team's latest submission before the deadline counts."
+        )
+    return lines, late
 
 
 def results_comment(lines: list[str], result: dict[str, Any], stats: dict[str, int], digest: str, total_images: int) -> list[str]:
@@ -280,7 +300,7 @@ def main() -> None:
     issue = json.loads(args.issue.read_text(encoding="utf-8"))
     body = issue.get("body") or ""
     fields = issue_fields(body)
-    lines = header(issue, fields, args)
+    lines, late = header(issue, fields, args)
     predictions = args.workdir / "predictions.json"
     status = "error"
 
@@ -333,10 +353,10 @@ def main() -> None:
     if reviewers and status != "needs-fix":
         comment += ["", f"cc {reviewers} for final results review"]
     args.comment.write_text("\n".join(comment) + "\n", encoding="utf-8")
-    print(f"status={status}")
+    print(f"status={status}\nlate={str(late).lower()}")
     if os.environ.get("GITHUB_OUTPUT"):
         with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
-            handle.write(f"status={status}\n")
+            handle.write(f"status={status}\nlate={str(late).lower()}\n")
 
 
 if __name__ == "__main__":

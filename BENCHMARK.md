@@ -52,7 +52,7 @@ uploaded with the
 [submission form](https://github.com/jtuhtan/taltech-fish-debris-hackathon/issues/new?template=submission.yml)
 are scored automatically with this evaluator, and the challenge owners review
 the results before they are final. Each team's latest submission before the
-deadline counts.
+deadline, 18:00 Munich time on 28 September 2026, counts.
 
 - **Fish F2 (25):** combines precision and recall, while giving recall more
   weight. Missing a migrating fish is costly.

@@ -127,7 +127,8 @@ time for the rest.
 5. Freeze your system before the final `test` run.
 6. Upload your test predictions with the [submission form](https://github.com/jtuhtan/taltech-fish-debris-hackathon/issues/new?template=submission.yml).
    They are scored automatically and sent to the challenge owners for review.
-   Your latest submission before the deadline counts.
+   The deadline is **18:00 Munich time**, and your latest submission before
+   it counts.
 7. Report all four categories using the
    [submission template](SUBMISSION_TEMPLATE.md).
 
@@ -190,11 +191,29 @@ outside data are allowed when clearly declared.
 | | |
 | --- | --- |
 | **Event** | [EIT Water HACKATHON Munich 2026](https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026) |
-| **When** | 28 September 2026, 10:00–19:00 |
+| **When** | 28 September 2026, 10:00–20:00 |
+| **Submission deadline** | 18:00 Munich time, when the final pitches start |
 | **Where** | Gewerbehof Ostbahnhof, Haagerstr. 5-11, 80339 München, Germany |
 | **Format** | One-day innovation sprint; working language is English |
 | **Challenge owners** | I AM HYDRO and TalTech |
 | **Organiser** | DEEP Ecosystems |
+
+| Time | Programme |
+| --- | --- |
+| 10:00–10:30 | Registration, coffee, and networking |
+| 10:30–10:50 | Welcome and framing by EIT Water and DEEP Ecosystems |
+| 10:50–11:15 | Challenge introduction and lightning talks |
+| 11:15–11:45 | Team formation and challenge selection |
+| 11:45–13:30 | Hack sprint I: problem framing, user journeys, first concepts |
+| 13:30–14:15 | Lunch and informal mentoring |
+| 14:15–16:15 | Hack sprint II: proof-of-concept design, feasibility, impact, and business logic |
+| 16:15–17:00 | Pitch coaching and pitch deck finalisation |
+| 17:00–18:00 | Tech check and pitch dry-runs |
+| **18:00** | **Submission deadline** |
+| 18:00–20:00 | Final pitches, jury decision, and award ceremony |
+
+See the [official event page](https://www.deep-ecosystems.com/eit-water-hackathon-munich-2026)
+for any programme changes.
 
 The goal is an early-stage proof of concept: a working experiment, mockup,
 user journey, or quick feasibility check. It does not need to be a finished
