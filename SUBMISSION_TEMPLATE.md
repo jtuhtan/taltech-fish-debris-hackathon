@@ -1,5 +1,8 @@
 # Submission report
 
+Fill in one section for each of the four DEEP judging categories. See
+[SCORING.md](SCORING.md) for what judges look for.
+
 ## Team
 
 - Team name:
@@ -14,7 +17,21 @@
 
 What did you build, and why is it useful?
 
-## Method
+## 🌍 1. Strategic Alignment & Climate Impact
+
+- How the system behaves on debris-heavy, low-contrast, or night frames, as a
+  proxy for floods and high flow:
+- How it protects fish recall during migration peaks:
+- What it does when a scene is unreadable:
+- How it helps show that a fish pass works, for example for the EU Water
+  Framework Directive:
+- What we could not test with this dataset:
+
+## 🛠️ 2. Innovation & Technical Feasibility
+
+- What is new or different in our approach:
+
+### Method
 
 - Model and version:
 - Pretrained weights:
@@ -25,7 +42,7 @@ What did you build, and why is it useful?
 - Post-processing:
 - Numeric precision or quantisation:
 
-## Detection results
+### Detection results
 
 | Metric | Validation | Test |
 | --- | ---: | ---: |
@@ -42,7 +59,7 @@ What did you build, and why is it useful?
 | Dusk F2 | | |
 | Night F2 | | |
 
-## Edge results
+### Edge results
 
 | Item | Result |
 | --- | --- |
@@ -59,7 +76,7 @@ What did you build, and why is it useful?
 | CPU, GPU, or NPU precision | |
 | Training time and hardware | |
 
-## Reproduce our result
+### Reproduce our result
 
 Give the shortest complete setup and inference instructions. State the expected
 output path and format.
@@ -68,31 +85,22 @@ output path and format.
 # Add commands here
 ```
 
-## Demo cases
+## 📈 3. Business-Readiness & Scalability
 
-- Fish case:
-- No-fish case:
-- Failure case:
-
-## Climate & ecological impact
-
-- How the system behaves on debris-heavy, low-contrast, or night frames, as a
-  proxy for floods and high flow:
-- How it protects fish recall during migration peaks:
-- How it helps show that a fish pass works, for example for the EU Water
-  Framework Directive:
-- What we could not test with this dataset:
-
-## Business case & scalability
-
-- Estimated review hours saved per station per day, with assumptions:
-- Deployment and operating model (edge device, licence, or service):
 - Target users and who pays:
+- Estimated review hours saved per station per day, with assumptions:
+- Deployment (camera to decision) and operating model (edge device, licence,
+  or service):
 - What a new site needs, and how it scales to many sites:
+- What a first pilot would look like:
 
-## Limits and next step
+## 🎤 4. Team Capabilities & Pitch Quality
 
-What does not work yet? What is the most useful next improvement?
+- Who did what, and the skills we bring to a pilot:
+- Fish demo case:
+- No-fish demo case:
+- Failure case, and what we would improve next:
+- What does not work yet:
 
 ## Licences and declarations
 
