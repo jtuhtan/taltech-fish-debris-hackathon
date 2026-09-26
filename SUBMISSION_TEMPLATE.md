@@ -29,8 +29,6 @@ What did you build, and why is it useful?
 
 ## 🛠️ 2. Innovation & Technical Feasibility
 
-- What is new or different in our approach:
-
 ### Method
 
 - Model and version:
