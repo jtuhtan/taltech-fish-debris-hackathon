@@ -34,6 +34,11 @@
   <a href="https://github.com/jtuhtan/taltech-fish-debris-hackathon/issues/new?template=submission.yml"><strong>📤 Submit predictions</strong></a>
 </p>
 
+<p align="center">
+  <img src="docs/promo/fish-or-debris.gif" width="800" alt="Animated quiz with real river-camera frames: in each round, one frame shows a fish and the other shows drifting debris, then the fish gets a green annotation box. It ends with a school of 13 fish, a night frame, and the dataset summary.">
+</p>
+<p align="center"><sub>Real training-split frames with their released fish boxes · <a href="docs/promo/fish-or-debris.mp4">Full-HD video for slides</a></sub></p>
+
 ---
 
 ## 01 — The challenge
