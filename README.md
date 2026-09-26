@@ -90,7 +90,7 @@ text are part of the original recordings, not dataset labels.
 
 | 1. Explore 🔎 | 2. Build 🛠️ | 3. Prove 📊 | 4. Pitch 🎤 |
 | --- | --- | --- | --- |
-| Study fish and no-fish scenes. | Train a detector and reduce false alarms. | Test accuracy, speed, memory, and model size. | Show a working demo, a failure, and your next step. |
+| Study fish and no-fish scenes. | Train a detector and reduce false alarms. | Test accuracy, speed, memory, and model size. | Show a working demo, a failure, and your next step. Make the climate impact and business case. |
 
 ### Quick start
 
