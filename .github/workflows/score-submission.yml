@@ -1,0 +1,77 @@
+name: Score submission
+
+on:
+  issues:
+    types: [opened, edited]
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: Submission issue number to score again
+        required: true
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: score-submission-${{ github.event.issue.number || inputs.issue }}
+  cancel-in-progress: true
+
+jobs:
+  score:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (contains(github.event.issue.labels.*.name, 'submission') &&
+       (github.event.action == 'opened' || github.event.changes.body))
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install evaluator requirements
+        run: python -m pip install -r requirements.txt
+
+      - name: Score predictions
+        id: score
+        env:
+          TEST_GROUND_TRUTH_GZ_B64: ${{ secrets.TEST_GROUND_TRUTH_GZ_B64 }}
+          RESULTS_REVIEWERS: ${{ vars.RESULTS_REVIEWERS || format('@{0}', github.repository_owner) }}
+        run: |
+          gh issue view "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" \
+            --json number,title,body,author > "$RUNNER_TEMP/issue.json"
+          python scripts/score_submission.py \
+            --issue "$RUNNER_TEMP/issue.json" \
+            --workdir "$RUNNER_TEMP/submission" \
+            --comment "$RUNNER_TEMP/comment.md"
+
+      - name: Post results
+        if: always() && steps.score.outputs.status != ''
+        run: gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/comment.md"
+
+      - name: Label issue
+        if: always() && steps.score.outputs.status != ''
+        continue-on-error: true
+        env:
+          STATUS: ${{ steps.score.outputs.status }}
+        run: |
+          if [ "$STATUS" = "scored" ]; then
+            gh issue edit "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --add-label scored --remove-label needs-fix
+          elif [ "$STATUS" = "needs-fix" ]; then
+            gh issue edit "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --add-label needs-fix --remove-label scored
+          fi
+
+      - name: Keep predictions and results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: submission-${{ env.ISSUE_NUMBER }}-run-${{ github.run_id }}
+          path: ${{ runner.temp }}/submission/
+          if-no-files-found: ignore

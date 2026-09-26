@@ -47,7 +47,11 @@ python scripts/evaluate_predictions.py \
   --output results.json
 ```
 
-The evaluator reports this part as `model_points_out_of_60`.
+The evaluator reports this part as `model_points_out_of_60`. Predictions
+uploaded with the
+[submission form](https://github.com/jtuhtan/taltech-fish-debris-hackathon/issues/new?template=submission.yml)
+are scored automatically with this evaluator, and the challenge owners review
+the results before they are final.
 
 - **Fish F2 (25):** combines precision and recall, while giving recall more
   weight. Missing a migrating fish is costly.
