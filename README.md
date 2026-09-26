@@ -219,6 +219,20 @@ The goal is an early-stage proof of concept: a working experiment, mockup,
 user journey, or quick feasibility check. It does not need to be a finished
 commercial product, but judges look for a credible path to real use.
 
+### Awards
+
+- **Teams:** stand-out teams receive jury recognition, visibility in the EIT
+  Water ecosystem, and tailored introductions to explore pilots,
+  collaborations, or further support.
+- **Students:** individual student prizes of **€500** (1st), **€300** (2nd),
+  and **€200** (3rd). Students from every team can briefly pitch their own
+  contribution in the final pitch session and explain why they should receive
+  a student award.
+
+> [!TIP]
+> Students: keep a note of what you personally built during the day, so you
+> can pitch your own contribution in the final session.
+
 <details>
 <summary><strong>Dataset files and formats</strong></summary>
 
