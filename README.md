@@ -145,21 +145,35 @@ outside data are allowed when clearly declared.
 
 ## 06 — How judging works
 
-Every eligible entry is scored out of **100 points**.
+The overall ranking is decided by the official **DEEP judging criteria** for
+the EIT Water Hackathon Munich 2026, out of **100 points**.
 
-| Area | Points | Main question |
+| DEEP category | Points | Main question |
+| --- | ---: | --- |
+| 🌍 Strategic Alignment & Climate Impact | **25** | Does it keep working during floods and high flow, and help prove that fish passes work? |
+| 🛠️ Innovation & Technical Feasibility | **25** | Does it work? Measured with our benchmark below. |
+| 📈 Business-Readiness & Scalability | **30** | How many review hours does it save, how does it scale, and how would it operate? |
+| 🎤 Team Capabilities & Pitch Quality | **20** | Does the team show a clear demo, honest evidence, and a convincing plan? |
+
+**Our benchmark measures category 2.** Its three parts are weighted within
+category 2:
+
+| Benchmark part | Weight | Main question |
 | --- | ---: | --- |
 | 🎯 Model performance | **60** | Does it find fish and reject false alarms? |
 | ⚡ Edge readiness | **15** | Is it fast, small, and practical near a camera? |
 | 🔁 Reproducibility | **10** | Can another person run and understand it? |
-| 🌍 Real-world value | **10** | Is the idea useful and feasible? |
-| 🎤 Demo | **5** | Does the team show clear evidence and limitations? |
 
 The scored model metrics include fish F2, no-fish rejection, COCO mAP50:95,
 and performance across times of day. The operating point is fixed at confidence
 `0.25` and IoU `0.50` so teams are compared fairly.
 
-**[Read the full scoring formula, judging process, and tie-breaks →](SCORING.md)**
+> [!TIP]
+> Model performance is important, but it is only part of category 2. Business
+> readiness is the largest category: bring an estimate of review hours saved
+> per station and a credible way to run your system at many sites.
+
+**[Read the DEEP categories, benchmark formula, and tie-breaks →](SCORING.md)**
 
 ## 07 — Hackathon day
 
