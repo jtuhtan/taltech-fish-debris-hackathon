@@ -1,0 +1,5168 @@
+[
+  {
+    "image_id": 1,
+    "file_name": "f-005c76a026d4.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        457.055,
+        503.687,
+        83.321,
+        54.509
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 1,
+        "category_id": 1,
+        "bbox": [
+          454.313720703125,
+          501.6535339355469,
+          84.0517578125,
+          55.598541259765625
+        ],
+        "score": 0.8658074736595154
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/blue"
+  },
+  {
+    "image_id": 2,
+    "file_name": "f-009073ad8cc4.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        545.319,
+        476.276,
+        93.366,
+        47.84
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 2,
+        "category_id": 1,
+        "bbox": [
+          542.0982666015625,
+          475.6874694824219,
+          96.962158203125,
+          46.020050048828125
+        ],
+        "score": 0.8318794965744019
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 3,
+    "file_name": "f-06152b40e2ec.png",
+    "width": 1280,
+    "height": 720,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        967.347,
+        242.42,
+        179.394,
+        77.647
+      ],
+      [
+        1146.74,
+        173.148,
+        83.127,
+        96.982
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 3,
+        "category_id": 1,
+        "bbox": [
+          964.5357666015625,
+          240.1544952392578,
+          179.1590576171875,
+          76.45494079589844
+        ],
+        "score": 0.8413995504379272
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/medium/medium/neutral"
+  },
+  {
+    "image_id": 4,
+    "file_name": "f-065dcb7c96e5.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        644.287,
+        560.628,
+        217.539,
+        88.191
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 4,
+        "category_id": 1,
+        "bbox": [
+          641.3057250976562,
+          561.860595703125,
+          212.3377685546875,
+          92.45623779296875
+        ],
+        "score": 0.8809108138084412
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 5,
+    "file_name": "f-0a69488bf1d8.png",
+    "width": 1280,
+    "height": 720,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        174.648,
+        564.923,
+        119.268,
+        57.157
+      ],
+      [
+        180.771,
+        266.281,
+        112.376,
+        40.794
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 5,
+        "category_id": 1,
+        "bbox": [
+          170.05093383789062,
+          268.0791320800781,
+          123.02801513671875,
+          47.2725830078125
+        ],
+        "score": 0.6564449071884155
+      },
+      {
+        "image_id": 5,
+        "category_id": 1,
+        "bbox": [
+          179.13375854492188,
+          558.3759155273438,
+          108.96347045898438,
+          61.97442626953125
+        ],
+        "score": 0.4143165647983551
+      },
+      {
+        "image_id": 5,
+        "category_id": 1,
+        "bbox": [
+          388.6305236816406,
+          405.0362548828125,
+          65.66473388671875,
+          39.437164306640625
+        ],
+        "score": 0.30540451407432556
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 6,
+    "file_name": "f-0bdb94c3e59d.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        637.632,
+        458.407,
+        358.201,
+        146.571
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 6,
+        "category_id": 1,
+        "bbox": [
+          623.96728515625,
+          451.6652526855469,
+          400.03271484375,
+          186.98812866210938
+        ],
+        "score": 0.7720876336097717
+      },
+      {
+        "image_id": 6,
+        "category_id": 1,
+        "bbox": [
+          626.4896240234375,
+          453.9577941894531,
+          239.3919677734375,
+          156.74441528320312
+        ],
+        "score": 0.5353088974952698
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 7,
+    "file_name": "f-0c132d8200f8.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 8,
+    "file_name": "f-0cc4596c32fa.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        752.563,
+        726.357,
+        169.745,
+        67.898
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 8,
+        "category_id": 1,
+        "bbox": [
+          747.3253784179688,
+          727.8448486328125,
+          177.54656982421875,
+          69.51141357421875
+        ],
+        "score": 0.8562331795692444
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 9,
+    "file_name": "f-0d40e6b97ccc.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        589.419,
+        775.394,
+        197.093,
+        89.588
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 10,
+    "file_name": "f-0e21bb3bd48d.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        505.967,
+        369.023,
+        74.076,
+        74.846
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 10,
+        "category_id": 1,
+        "bbox": [
+          503.1750793457031,
+          365.30267333984375,
+          80.01547241210938,
+          79.54037475585938
+        ],
+        "score": 0.7412872314453125
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 11,
+    "file_name": "f-1087c5ede7fd.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        908.163,
+        780.109,
+        175.403,
+        103.734
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 12,
+    "file_name": "f-119a76a7e009.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        683.722,
+        724.471,
+        178.232,
+        89.588
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 12,
+        "category_id": 1,
+        "bbox": [
+          691.2025756835938,
+          724.0089111328125,
+          175.12335205078125,
+          87.65716552734375
+        ],
+        "score": 0.8272541165351868
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 13,
+    "file_name": "f-13912a5a1e81.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        568.351,
+        466.309,
+        71.556,
+        69.304
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 13,
+        "category_id": 1,
+        "bbox": [
+          565.7089233398438,
+          462.5172119140625,
+          73.71453857421875,
+          74.3983154296875
+        ],
+        "score": 0.8372487425804138
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 14,
+    "file_name": "f-14b352e8dc2f.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        1.977,
+        465.483,
+        95.629,
+        76.355
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 14,
+        "category_id": 1,
+        "bbox": [
+          5.831777572631836,
+          476.1352233886719,
+          82.6007251739502,
+          58.406829833984375
+        ],
+        "score": 0.6395037770271301
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 15,
+    "file_name": "f-16c82e4c8542.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        395.538,
+        513.031,
+        98.895,
+        39.713
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 15,
+        "category_id": 1,
+        "bbox": [
+          395.2330322265625,
+          507.32745361328125,
+          100.14993286132812,
+          45.66485595703125
+        ],
+        "score": 0.8769429922103882
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 16,
+    "file_name": "f-188c990a432b.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        450.088,
+        508.194,
+        92.003,
+        41.894
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 16,
+        "category_id": 1,
+        "bbox": [
+          449.54351806640625,
+          507.2972412109375,
+          94.2579345703125,
+          44.55401611328125
+        ],
+        "score": 0.8691595196723938
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 17,
+    "file_name": "f-1a660ab0bcee.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 18,
+    "file_name": "f-1f951fde0b27.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        857.488,
+        551.135,
+        163.022,
+        100.206
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 18,
+        "category_id": 1,
+        "bbox": [
+          847.8892822265625,
+          542.6074829101562,
+          175.97412109375,
+          107.18341064453125
+        ],
+        "score": 0.7520728707313538
+      },
+      {
+        "image_id": 18,
+        "category_id": 1,
+        "bbox": [
+          970.7301635742188,
+          524.8046264648438,
+          53.12591552734375,
+          71.10772705078125
+        ],
+        "score": 0.46864742040634155
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 19,
+    "file_name": "f-204e517c4360.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        63.735,
+        509.166,
+        145.232,
+        65.808
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 19,
+        "category_id": 1,
+        "bbox": [
+          60.98881149291992,
+          504.7640075683594,
+          147.60792922973633,
+          71.26193237304688
+        ],
+        "score": 0.8687120079994202
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 20,
+    "file_name": "f-22a8ecb23fbd.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "bright/high/medium/neutral"
+  },
+  {
+    "image_id": 21,
+    "file_name": "f-22c4f54613b3.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        371.565,
+        656.272,
+        245.023,
+        108.423
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 21,
+        "category_id": 1,
+        "bbox": [
+          384.1057434082031,
+          647.2341918945312,
+          241.40853881835938,
+          115.37957763671875
+        ],
+        "score": 0.8976277709007263
+      },
+      {
+        "image_id": 21,
+        "category_id": 1,
+        "bbox": [
+          516.4407958984375,
+          689.6036987304688,
+          227.6121826171875,
+          113.059814453125
+        ],
+        "score": 0.7578041553497314
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 22,
+    "file_name": "f-22d53a9e5b36.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        483.353,
+        175.464,
+        91.433,
+        79.08
+      ],
+      [
+        608.354,
+        379.145,
+        31.646,
+        41.358
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 22,
+        "category_id": 1,
+        "bbox": [
+          483.31353759765625,
+          177.8001251220703,
+          93.083740234375,
+          76.12982177734375
+        ],
+        "score": 0.7425990104675293
+      },
+      {
+        "image_id": 22,
+        "category_id": 1,
+        "bbox": [
+          607.732666015625,
+          382.4894104003906,
+          30.4339599609375,
+          41.281707763671875
+        ],
+        "score": 0.5261637568473816
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 23,
+    "file_name": "f-247b56451f52.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        528.344,
+        435.381,
+        108.027,
+        56.328
+      ],
+      [
+        4.729,
+        419.201,
+        27.348,
+        117.455
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 23,
+        "category_id": 1,
+        "bbox": [
+          526.5595703125,
+          435.8603210449219,
+          112.5341796875,
+          56.29766845703125
+        ],
+        "score": 0.852238118648529
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 24,
+    "file_name": "f-25098cf4d910.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        84.132,
+        503.617,
+        145.195,
+        66.195
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 24,
+        "category_id": 1,
+        "bbox": [
+          84.68177032470703,
+          501.56640625,
+          143.88114166259766,
+          68.6552734375
+        ],
+        "score": 0.9015972018241882
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 25,
+    "file_name": "f-2572b83cfa3d.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        680.893,
+        720.698,
+        187.663,
+        97.132
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 25,
+        "category_id": 1,
+        "bbox": [
+          696.4552001953125,
+          722.8840942382812,
+          178.93133544921875,
+          84.62896728515625
+        ],
+        "score": 0.8714205622673035
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 26,
+    "file_name": "f-25d2d43d279f.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        572.326,
+        491.709,
+        66.36,
+        71.759
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 26,
+        "category_id": 1,
+        "bbox": [
+          572.4586791992188,
+          491.9697570800781,
+          67.54132080078125,
+          64.99063110351562
+        ],
+        "score": 0.8407683372497559
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 27,
+    "file_name": "f-2a26ce94ea06.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 28,
+    "file_name": "f-2e217d9e998c.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        501.337,
+        391.399,
+        138.12,
+        70.988
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 28,
+        "category_id": 1,
+        "bbox": [
+          500.3768310546875,
+          396.2204895019531,
+          137.3048095703125,
+          69.06195068359375
+        ],
+        "score": 0.8706439137458801
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 29,
+    "file_name": "f-2e2e0f10aaa6.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        273.883,
+        387.185,
+        205.78,
+        103.625
+      ],
+      [
+        873.585,
+        452.593,
+        148.455,
+        178.588
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 29,
+        "category_id": 1,
+        "bbox": [
+          262.05780029296875,
+          388.7170104980469,
+          218.05987548828125,
+          106.8931884765625
+        ],
+        "score": 0.8502931594848633
+      },
+      {
+        "image_id": 29,
+        "category_id": 1,
+        "bbox": [
+          873.106201171875,
+          429.36126708984375,
+          149.1580810546875,
+          216.35870361328125
+        ],
+        "score": 0.5138372778892517
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 30,
+    "file_name": "f-317e628ff87d.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 31,
+    "file_name": "f-32ac7e60d7d0.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 32,
+    "file_name": "f-32ae6d218539.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        240.529,
+        352.047,
+        95.681,
+        73.303
+      ],
+      [
+        0.555,
+        408.375,
+        112.657,
+        75.618
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 32,
+        "category_id": 1,
+        "bbox": [
+          0.0,
+          408.0746765136719,
+          119.23271942138672,
+          77.89077758789062
+        ],
+        "score": 0.8578472137451172
+      },
+      {
+        "image_id": 32,
+        "category_id": 1,
+        "bbox": [
+          240.0762176513672,
+          352.68109130859375,
+          96.86692810058594,
+          75.32379150390625
+        ],
+        "score": 0.44111689925193787
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 33,
+    "file_name": "f-337a47d9c132.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 34,
+    "file_name": "f-33cb4464d490.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        334.091,
+        368.077,
+        514.506,
+        209.715
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 34,
+        "category_id": 1,
+        "bbox": [
+          314.3887634277344,
+          350.1307067871094,
+          564.3637390136719,
+          254.11105346679688
+        ],
+        "score": 0.5404722094535828
+      },
+      {
+        "image_id": 34,
+        "category_id": 1,
+        "bbox": [
+          307.05352783203125,
+          324.8974609375,
+          663.1162719726562,
+          315.91802978515625
+        ],
+        "score": 0.48391520977020264
+      },
+      {
+        "image_id": 34,
+        "category_id": 1,
+        "bbox": [
+          324.5142822265625,
+          345.9822692871094,
+          436.774658203125,
+          236.23220825195312
+        ],
+        "score": 0.41890060901641846
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 35,
+    "file_name": "f-340ce92a3266.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        260.468,
+        508.636,
+        105.359,
+        73.242
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 35,
+        "category_id": 1,
+        "bbox": [
+          266.32958984375,
+          506.5108947753906,
+          99.47640991210938,
+          74.09689331054688
+        ],
+        "score": 0.7033479809761047
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 36,
+    "file_name": "f-3492ed2c53a5.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        651.659,
+        732.69,
+        187.324,
+        75.71
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 36,
+        "category_id": 1,
+        "bbox": [
+          654.3346557617188,
+          724.1318359375,
+          186.326171875,
+          81.30010986328125
+        ],
+        "score": 0.8524197340011597
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 37,
+    "file_name": "f-35728ad58201.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        510.597,
+        430.751,
+        128.089,
+        69.445
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 37,
+        "category_id": 1,
+        "bbox": [
+          510.60198974609375,
+          433.8041687011719,
+          127.8599853515625,
+          65.33572387695312
+        ],
+        "score": 0.8455148339271545
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 38,
+    "file_name": "f-3628f10ef4ac.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        155.264,
+        429.834,
+        268.694,
+        98.052
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 38,
+        "category_id": 1,
+        "bbox": [
+          151.7530059814453,
+          430.8427734375,
+          277.35438537597656,
+          100.4935302734375
+        ],
+        "score": 0.9038544297218323
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/blue"
+  },
+  {
+    "image_id": 39,
+    "file_name": "f-371f742023cb.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 40,
+    "file_name": "f-392268361625.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        194.199,
+        511.604,
+        140.962,
+        60.169
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 40,
+        "category_id": 1,
+        "bbox": [
+          193.65773010253906,
+          510.3098449707031,
+          142.1593780517578,
+          60.165008544921875
+        ],
+        "score": 0.876978874206543
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 41,
+    "file_name": "f-3a4a11e6ad47.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        900.042,
+        623.097,
+        121.998,
+        119.793
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 42,
+    "file_name": "f-3c1334d84b84.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "bright/high/medium/neutral"
+  },
+  {
+    "image_id": 43,
+    "file_name": "f-3c67dec30384.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 44,
+    "file_name": "f-3d687f771166.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        373.832,
+        518.187,
+        102.145,
+        53.132
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 44,
+        "category_id": 1,
+        "bbox": [
+          371.673828125,
+          520.8245849609375,
+          107.05258178710938,
+          52.29168701171875
+        ],
+        "score": 0.8825403451919556
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 45,
+    "file_name": "f-3e50a2a682b2.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        1081.067,
+        655.866,
+        186.031,
+        116.394
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 45,
+        "category_id": 1,
+        "bbox": [
+          1070.0198974609375,
+          648.1754760742188,
+          208.890869140625,
+          146.1900634765625
+        ],
+        "score": 0.6315197348594666
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 46,
+    "file_name": "f-40a6d76fdfb1.png",
+    "width": 1280,
+    "height": 720,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        117.32,
+        62.73,
+        427.517,
+        126.036
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 46,
+        "category_id": 1,
+        "bbox": [
+          115.85163116455078,
+          47.3007926940918,
+          441.5742721557617,
+          146.97348403930664
+        ],
+        "score": 0.8761835098266602
+      },
+      {
+        "image_id": 46,
+        "category_id": 1,
+        "bbox": [
+          1061.190673828125,
+          113.42440795898438,
+          68.49462890625,
+          66.80162048339844
+        ],
+        "score": 0.5474311113357544
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 47,
+    "file_name": "f-41e139d7618a.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        545.32,
+        397.572,
+        91.823,
+        54.784
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 47,
+        "category_id": 1,
+        "bbox": [
+          545.5909423828125,
+          398.4901428222656,
+          93.61639404296875,
+          48.76861572265625
+        ],
+        "score": 0.8471359014511108
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 48,
+    "file_name": "f-435342ff57cd.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        710.127,
+        742.388,
+        180.118,
+        104.677
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 49,
+    "file_name": "f-44168d345573.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        510.006,
+        518.482,
+        128.485,
+        103.567
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 49,
+        "category_id": 1,
+        "bbox": [
+          512.3783569335938,
+          514.9725952148438,
+          126.0611572265625,
+          108.71893310546875
+        ],
+        "score": 0.9088401198387146
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 50,
+    "file_name": "f-484b8d7f4ada.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        856.681,
+        481.255,
+        167.319,
+        119.793
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 50,
+        "category_id": 1,
+        "bbox": [
+          855.8661499023438,
+          462.9329833984375,
+          167.02313232421875,
+          145.5234375
+        ],
+        "score": 0.8239135146141052
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 51,
+    "file_name": "f-4851f0b754f9.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        874.214,
+        785.768,
+        182.004,
+        116.936
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 52,
+    "file_name": "f-4873dc0b7b64.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        300.537,
+        530.162,
+        123.813,
+        40.492
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 52,
+        "category_id": 1,
+        "bbox": [
+          302.5710754394531,
+          529.6292114257812,
+          120.41665649414062,
+          42.490966796875
+        ],
+        "score": 0.8695290684700012
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/blue"
+  },
+  {
+    "image_id": 53,
+    "file_name": "f-497444f417e2.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        554.105,
+        496.781,
+        83.49,
+        58.116
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 53,
+        "category_id": 1,
+        "bbox": [
+          556.6720581054688,
+          500.3110046386719,
+          83.32794189453125,
+          63.336639404296875
+        ],
+        "score": 0.8501441478729248
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 54,
+    "file_name": "f-49849ddf55fe.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        575.274,
+        743.331,
+        168.802,
+        73.557
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 54,
+        "category_id": 1,
+        "bbox": [
+          577.3423461914062,
+          746.1149291992188,
+          179.345458984375,
+          65.1593017578125
+        ],
+        "score": 0.82487553358078
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 55,
+    "file_name": "f-4aa8d31d4948.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        184.065,
+        528.573,
+        147.518,
+        54.253
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 55,
+        "category_id": 1,
+        "bbox": [
+          183.33905029296875,
+          527.0928344726562,
+          152.67855834960938,
+          50.96923828125
+        ],
+        "score": 0.892959475517273
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 56,
+    "file_name": "f-4af7f1a861f1.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        454.268,
+        369.023,
+        156.639,
+        59.414
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 56,
+        "category_id": 1,
+        "bbox": [
+          453.5869140625,
+          365.3030700683594,
+          159.87841796875,
+          59.898651123046875
+        ],
+        "score": 0.8709090352058411
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 57,
+    "file_name": "f-4b76fb39ac59.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        517.271,
+        462.403,
+        115.413,
+        76.124
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 57,
+        "category_id": 1,
+        "bbox": [
+          520.2777099609375,
+          464.5050354003906,
+          114.44677734375,
+          71.29287719726562
+        ],
+        "score": 0.9267330765724182
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 58,
+    "file_name": "f-4f62a76d182d.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        512.342,
+        527.047,
+        126.149,
+        104.345
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 58,
+        "category_id": 1,
+        "bbox": [
+          509.5862121582031,
+          522.8572998046875,
+          129.00100708007812,
+          107.26434326171875
+        ],
+        "score": 0.8879646062850952
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 59,
+    "file_name": "f-50d3057e29be.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 60,
+    "file_name": "f-54105dc471c4.png",
+    "width": 1280,
+    "height": 720,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        164.001,
+        4.866,
+        137.389,
+        76.049
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 60,
+        "category_id": 1,
+        "bbox": [
+          160.49351501464844,
+          3.4849491119384766,
+          150.55006408691406,
+          71.52989768981934
+        ],
+        "score": 0.6225141882896423
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 61,
+    "file_name": "f-544671299568.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        14.482,
+        119.671,
+        426.964,
+        226.358
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 61,
+        "category_id": 1,
+        "bbox": [
+          0.0,
+          117.15338897705078,
+          429.98248291015625,
+          227.59172821044922
+        ],
+        "score": 0.7178535461425781
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 62,
+    "file_name": "f-54e8a5666180.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 63,
+    "file_name": "f-5610261714b5.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        952.485,
+        743.331,
+        185.777,
+        117.879
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 64,
+    "file_name": "f-582da8d28016.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        416.718,
+        600.472,
+        275.647,
+        101.749
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 64,
+        "category_id": 1,
+        "bbox": [
+          416.3154602050781,
+          596.0496215820312,
+          275.3551330566406,
+          105.91253662109375
+        ],
+        "score": 0.8765345811843872
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 65,
+    "file_name": "f-58c92e704308.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        789.068,
+        281.355,
+        88.191,
+        54.385
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 65,
+        "category_id": 1,
+        "bbox": [
+          790.1324462890625,
+          284.0639953613281,
+          92.78814697265625,
+          50.464385986328125
+        ],
+        "score": 0.7064513564109802
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 66,
+    "file_name": "f-59c76241f425.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        826.004,
+        716.618,
+        175.255,
+        64.073
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 66,
+        "category_id": 1,
+        "bbox": [
+          832.6444702148438,
+          716.6085205078125,
+          165.30682373046875,
+          66.15875244140625
+        ],
+        "score": 0.8214827179908752
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 67,
+    "file_name": "f-59ffda557a7c.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        1194.844,
+        773.09,
+        85.156,
+        60.772
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 68,
+    "file_name": "f-5a6626179898.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        460.168,
+        430.408,
+        86.09,
+        53.757
+      ],
+      [
+        333.736,
+        528.335,
+        134.736,
+        50.7
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 68,
+        "category_id": 1,
+        "bbox": [
+          324.4707336425781,
+          529.25146484375,
+          142.67453002929688,
+          64.450927734375
+        ],
+        "score": 0.8619790077209473
+      },
+      {
+        "image_id": 68,
+        "category_id": 1,
+        "bbox": [
+          458.9416809082031,
+          434.36578369140625,
+          79.07064819335938,
+          47.305816650390625
+        ],
+        "score": 0.8022595643997192
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 69,
+    "file_name": "f-5c0f723e5cd1.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        555.35,
+        486.308,
+        82.564,
+        61.728
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 69,
+        "category_id": 1,
+        "bbox": [
+          551.6142578125,
+          490.2096862792969,
+          88.3857421875,
+          55.516204833984375
+        ],
+        "score": 0.8231473565101624
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 70,
+    "file_name": "f-5e409f1741ee.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 71,
+    "file_name": "f-5e4595d11ac5.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        412.017,
+        728.546,
+        156.995,
+        63.279
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 71,
+        "category_id": 1,
+        "bbox": [
+          412.4883728027344,
+          721.9532470703125,
+          197.25454711914062,
+          81.41583251953125
+        ],
+        "score": 0.25268349051475525
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 72,
+    "file_name": "f-64e46ab95310.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        426.112,
+        687.23,
+        185.917,
+        79.066
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 72,
+        "category_id": 1,
+        "bbox": [
+          426.2343444824219,
+          675.785888671875,
+          194.65518188476562,
+          92.849609375
+        ],
+        "score": 0.8320714831352234
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 73,
+    "file_name": "f-68c1531f951e.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        330.037,
+        540.32,
+        107.255,
+        57.099
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 73,
+        "category_id": 1,
+        "bbox": [
+          327.7682800292969,
+          545.2737426757812,
+          97.1070556640625,
+          50.80328369140625
+        ],
+        "score": 0.8549754619598389
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 74,
+    "file_name": "f-6bcc55bd4487.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        716.9,
+        473.363,
+        303.611,
+        185.457
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 74,
+        "category_id": 1,
+        "bbox": [
+          725.407470703125,
+          471.5375671386719,
+          298.0438232421875,
+          180.40121459960938
+        ],
+        "score": 0.8014245629310608
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 75,
+    "file_name": "f-710534041808.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 76,
+    "file_name": "f-71aac4a4ae37.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 77,
+    "file_name": "f-71f86590a5f2.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        518.313,
+        512.542,
+        120.373,
+        52.469
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 77,
+        "category_id": 1,
+        "bbox": [
+          517.2405395507812,
+          515.8585815429688,
+          122.75946044921875,
+          48.697998046875
+        ],
+        "score": 0.8707414269447327
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 78,
+    "file_name": "f-73f1aed469f7.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 79,
+    "file_name": "f-756b29128a13.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        409.11,
+        468.027,
+        546.052,
+        217.539
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 79,
+        "category_id": 1,
+        "bbox": [
+          418.2752685546875,
+          461.5710754394531,
+          534.27490234375,
+          177.77810668945312
+        ],
+        "score": 0.8204331398010254
+      },
+      {
+        "image_id": 79,
+        "category_id": 1,
+        "bbox": [
+          344.5362854003906,
+          459.4152526855469,
+          522.4052429199219,
+          209.10787963867188
+        ],
+        "score": 0.394305944442749
+      },
+      {
+        "image_id": 79,
+        "category_id": 1,
+        "bbox": [
+          542.614013671875,
+          458.9888916015625,
+          411.52423095703125,
+          166.70587158203125
+        ],
+        "score": 0.2926624119281769
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 80,
+    "file_name": "f-76b6e74d3d02.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 81,
+    "file_name": "f-77d10ea2c7aa.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        2.098,
+        531.833,
+        135.805,
+        71.76
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 81,
+        "category_id": 1,
+        "bbox": [
+          0.0,
+          529.9192504882812,
+          137.9499053955078,
+          71.69561767578125
+        ],
+        "score": 0.8650564551353455
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 82,
+    "file_name": "f-7928d76c002d.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        481.715,
+        479.241,
+        156.886,
+        97.76
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 82,
+        "category_id": 1,
+        "bbox": [
+          482.9521484375,
+          480.672607421875,
+          155.14166259765625,
+          105.06365966796875
+        ],
+        "score": 0.8421887159347534
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 83,
+    "file_name": "f-79d3a4aa40c3.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        324.636,
+        504.055,
+        146.608,
+        57.099
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 83,
+        "category_id": 1,
+        "bbox": [
+          322.1139831542969,
+          500.6962585449219,
+          151.95596313476562,
+          59.696380615234375
+        ],
+        "score": 0.8768669366836548
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 84,
+    "file_name": "f-79dce4d89be8.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 85,
+    "file_name": "f-7d8c56353e62.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        231.209,
+        396.004,
+        210.238,
+        100.737
+      ],
+      [
+        860.82,
+        549.351,
+        139.62,
+        62.13
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 85,
+        "category_id": 1,
+        "bbox": [
+          231.9304962158203,
+          396.9324645996094,
+          210.91932678222656,
+          103.6263427734375
+        ],
+        "score": 0.8528532385826111
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 86,
+    "file_name": "f-7db1bcfed7eb.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/blue"
+  },
+  {
+    "image_id": 87,
+    "file_name": "f-7dc94cdad715.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        82.07,
+        769.736,
+        123.537,
+        51.867
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 88,
+    "file_name": "f-81f16ab6f67d.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        295.943,
+        394.095,
+        723.071,
+        237.056
+      ],
+      [
+        822.0,
+        386.888,
+        201.574,
+        180.323
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 88,
+        "category_id": 1,
+        "bbox": [
+          280.5378723144531,
+          446.3566589355469,
+          568.2824401855469,
+          183.65988159179688
+        ],
+        "score": 0.6081181764602661
+      },
+      {
+        "image_id": 88,
+        "category_id": 1,
+        "bbox": [
+          313.7547607421875,
+          378.48529052734375,
+          663.1424560546875,
+          247.7755126953125
+        ],
+        "score": 0.524997889995575
+      },
+      {
+        "image_id": 88,
+        "category_id": 1,
+        "bbox": [
+          290.56097412109375,
+          468.9145202636719,
+          437.80621337890625,
+          152.46865844726562
+        ],
+        "score": 0.3818367123603821
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 89,
+    "file_name": "f-82c3248a4ebe.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        818.575,
+        734.844,
+        183.891,
+        100.904
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 90,
+    "file_name": "f-838e4d23c15c.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 91,
+    "file_name": "f-83901de9ea85.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        352.414,
+        524.116,
+        155.096,
+        44.753
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 91,
+        "category_id": 1,
+        "bbox": [
+          350.15789794921875,
+          521.8468627929688,
+          158.83615112304688,
+          50.9862060546875
+        ],
+        "score": 0.8758503198623657
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 92,
+    "file_name": "f-840526b0924d.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        902.982,
+        511.388,
+        119.058,
+        100.685
+      ],
+      [
+        511.192,
+        436.425,
+        355.044,
+        264.788
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 92,
+        "category_id": 1,
+        "bbox": [
+          508.6189880371094,
+          470.3013916015625,
+          329.7502746582031,
+          210.54388427734375
+        ],
+        "score": 0.6823873519897461
+      },
+      {
+        "image_id": 92,
+        "category_id": 1,
+        "bbox": [
+          493.09149169921875,
+          458.54656982421875,
+          526.0712280273438,
+          231.9764404296875
+        ],
+        "score": 0.3589828312397003
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 93,
+    "file_name": "f-8418a769be07.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 94,
+    "file_name": "f-85de26ea87a1.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        268.408,
+        470.7,
+        184.318,
+        92.874
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 94,
+        "category_id": 1,
+        "bbox": [
+          270.6568908691406,
+          477.4908142089844,
+          184.83792114257812,
+          87.18191528320312
+        ],
+        "score": 0.8918880224227905
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 95,
+    "file_name": "f-86d6317ed621.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 96,
+    "file_name": "f-8936ffdd3e04.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        5.558,
+        211.565,
+        461.611,
+        246.173
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 96,
+        "category_id": 1,
+        "bbox": [
+          0.0,
+          236.2407989501953,
+          459.6980895996094,
+          220.39076232910156
+        ],
+        "score": 0.7311702370643616
+      },
+      {
+        "image_id": 96,
+        "category_id": 1,
+        "bbox": [
+          61.24159240722656,
+          214.25247192382812,
+          120.24913024902344,
+          89.5650634765625
+        ],
+        "score": 0.48658111691474915
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 97,
+    "file_name": "f-8a06585c66cd.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 98,
+    "file_name": "f-8a6b622d3363.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        18.547,
+        501.249,
+        129.059,
+        63.613
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 98,
+        "category_id": 1,
+        "bbox": [
+          19.654998779296875,
+          502.2565002441406,
+          128.32620239257812,
+          62.029266357421875
+        ],
+        "score": 0.8846766948699951
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 99,
+    "file_name": "f-8bf1ef050b08.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 99,
+        "category_id": 1,
+        "bbox": [
+          814.517822265625,
+          467.0893249511719,
+          60.27325439453125,
+          30.42156982421875
+        ],
+        "score": 0.26127734780311584
+      }
+    ],
+    "status": "false_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 100,
+    "file_name": "f-912decd5688d.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        239.768,
+        508.479,
+        129.337,
+        75.496
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 100,
+        "category_id": 1,
+        "bbox": [
+          239.14698791503906,
+          513.8695678710938,
+          130.1300811767578,
+          66.9219970703125
+        ],
+        "score": 0.9066181778907776
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 101,
+    "file_name": "f-91fd78bb405c.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        810.088,
+        784.825,
+        187.663,
+        85.816
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 102,
+    "file_name": "f-923a9e3cedbd.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        409.224,
+        521.337,
+        107.228,
+        52.386
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 102,
+        "category_id": 1,
+        "bbox": [
+          412.3059997558594,
+          523.467529296875,
+          101.44638061523438,
+          44.83038330078125
+        ],
+        "score": 0.8632850050926208
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 103,
+    "file_name": "f-94cda0ada244.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        526.029,
+        347.418,
+        112.657,
+        74.074
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 103,
+        "category_id": 1,
+        "bbox": [
+          527.8653564453125,
+          358.18011474609375,
+          109.973388671875,
+          63.706878662109375
+        ],
+        "score": 0.8462323546409607
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 104,
+    "file_name": "f-952ba3487b17.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 105,
+    "file_name": "f-97fd473d256c.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        539.568,
+        322.816,
+        100.432,
+        39.285
+      ],
+      [
+        595.607,
+        283.524,
+        40.007,
+        51.438
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 105,
+        "category_id": 1,
+        "bbox": [
+          537.0167846679688,
+          323.0933532714844,
+          100.91180419921875,
+          42.165313720703125
+        ],
+        "score": 0.7855421304702759
+      },
+      {
+        "image_id": 105,
+        "category_id": 1,
+        "bbox": [
+          591.9109497070312,
+          285.31231689453125,
+          45.48614501953125,
+          44.29852294921875
+        ],
+        "score": 0.288845032453537
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 106,
+    "file_name": "f-98fe007543f7.png",
+    "width": 1280,
+    "height": 720,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        608.722,
+        172.378,
+        72.352,
+        76.2
+      ],
+      [
+        486.341,
+        452.547,
+        170.873,
+        60.036
+      ],
+      [
+        1112.104,
+        220.099,
+        87.745,
+        37.715
+      ],
+      [
+        233.11,
+        70.009,
+        85.436,
+        37.715
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 106,
+        "category_id": 1,
+        "bbox": [
+          230.77566528320312,
+          67.84153747558594,
+          87.06451416015625,
+          39.070953369140625
+        ],
+        "score": 0.7930210828781128
+      },
+      {
+        "image_id": 106,
+        "category_id": 1,
+        "bbox": [
+          1113.1346435546875,
+          216.77003479003906,
+          71.31591796875,
+          39.97914123535156
+        ],
+        "score": 0.7885974645614624
+      },
+      {
+        "image_id": 106,
+        "category_id": 1,
+        "bbox": [
+          496.034423828125,
+          457.1498718261719,
+          164.9061279296875,
+          58.741180419921875
+        ],
+        "score": 0.5823412537574768
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 107,
+    "file_name": "f-9c864cbaf02b.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        562.958,
+        527.826,
+        75.534,
+        81.763
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 107,
+        "category_id": 1,
+        "bbox": [
+          560.9970703125,
+          520.5211181640625,
+          78.94635009765625,
+          92.18609619140625
+        ],
+        "score": 0.8443180322647095
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 108,
+    "file_name": "f-9d5a44d846ca.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        136.653,
+        521.337,
+        148.155,
+        57.297
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 108,
+        "category_id": 1,
+        "bbox": [
+          130.87783813476562,
+          521.9785766601562,
+          152.20803833007812,
+          51.81805419921875
+        ],
+        "score": 0.8681496381759644
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 109,
+    "file_name": "f-a091d53b5ef8.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "bright/high/medium/neutral"
+  },
+  {
+    "image_id": 110,
+    "file_name": "f-a1c55f0674d5.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 111,
+    "file_name": "f-a2d4f59f0e7e.png",
+    "width": 1280,
+    "height": 720,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        1123.65,
+        26.906,
+        37.715,
+        69.273
+      ],
+      [
+        373.965,
+        10.742,
+        153.939,
+        66.194
+      ],
+      [
+        306.231,
+        326.317,
+        118.533,
+        50.8
+      ],
+      [
+        772.668,
+        274.748,
+        82.358,
+        60.036
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 111,
+        "category_id": 1,
+        "bbox": [
+          377.2933654785156,
+          22.60346794128418,
+          149.90817260742188,
+          61.90490913391113
+        ],
+        "score": 0.6965136528015137
+      },
+      {
+        "image_id": 111,
+        "category_id": 1,
+        "bbox": [
+          380.3761901855469,
+          36.593997955322266,
+          128.09344482421875,
+          47.276004791259766
+        ],
+        "score": 0.34995362162590027
+      },
+      {
+        "image_id": 111,
+        "category_id": 1,
+        "bbox": [
+          770.9993896484375,
+          311.0816955566406,
+          52.37109375,
+          27.050506591796875
+        ],
+        "score": 0.25447186827659607
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 112,
+    "file_name": "f-a2f601ec7f5a.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        509.053,
+        416.863,
+        106.484,
+        43.21
+      ],
+      [
+        622.561,
+        428.46,
+        17.439,
+        15.746
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 112,
+        "category_id": 1,
+        "bbox": [
+          509.80218505859375,
+          418.6636657714844,
+          105.6519775390625,
+          44.876007080078125
+        ],
+        "score": 0.847406804561615
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 113,
+    "file_name": "f-a3db78eaa710.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        528.344,
+        397.572,
+        109.571,
+        54.784
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 113,
+        "category_id": 1,
+        "bbox": [
+          529.2536010742188,
+          392.94586181640625,
+          108.6715087890625,
+          60.918212890625
+        ],
+        "score": 0.8311713933944702
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 114,
+    "file_name": "f-a5de213d5104.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 115,
+    "file_name": "f-a810cfb46620.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "bright/high/medium/neutral"
+  },
+  {
+    "image_id": 116,
+    "file_name": "f-a96be3eaf59c.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        610.729,
+        421.745,
+        28.622,
+        32.616
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 116,
+        "category_id": 1,
+        "bbox": [
+          610.4492797851562,
+          421.10894775390625,
+          27.80914306640625,
+          35.226806640625
+        ],
+        "score": 0.6216151118278503
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 117,
+    "file_name": "f-a981c121f5c6.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        228.118,
+        536.392,
+        102.788,
+        43.607
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 117,
+        "category_id": 1,
+        "bbox": [
+          228.35116577148438,
+          533.4389038085938,
+          101.83230590820312,
+          44.52044677734375
+        ],
+        "score": 0.8200797438621521
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 118,
+    "file_name": "f-ab1afed466f1.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        528.73,
+        455.855,
+        88.402,
+        37.653
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 118,
+        "category_id": 1,
+        "bbox": [
+          528.8729858398438,
+          452.4396057128906,
+          90.62249755859375,
+          44.546051025390625
+        ],
+        "score": 0.8586854338645935
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 119,
+    "file_name": "f-abc94ec8f683.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 120,
+    "file_name": "f-ac40d98e0f38.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        67.706,
+        148.601,
+        84.099,
+        52.951
+      ],
+      [
+        103.526,
+        42.698,
+        133.936,
+        62.296
+      ],
+      [
+        23.32,
+        112.781,
+        125.37,
+        39.713
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 120,
+        "category_id": 1,
+        "bbox": [
+          104.8216781616211,
+          45.8342170715332,
+          134.0324478149414,
+          57.85219955444336
+        ],
+        "score": 0.7228318452835083
+      },
+      {
+        "image_id": 120,
+        "category_id": 1,
+        "bbox": [
+          23.912996292114258,
+          113.66556549072266,
+          122.77253532409668,
+          41.042823791503906
+        ],
+        "score": 0.629239022731781
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/blue"
+  },
+  {
+    "image_id": 121,
+    "file_name": "f-ad30559cc9b2.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        492.078,
+        510.999,
+        70.218,
+        49.383
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 121,
+        "category_id": 1,
+        "bbox": [
+          483.1524353027344,
+          510.7069091796875,
+          76.33206176757812,
+          46.92767333984375
+        ],
+        "score": 0.8249555230140686
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 122,
+    "file_name": "f-aedbc4a84d7f.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        553.132,
+        505.244,
+        86.868,
+        78.948
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 122,
+        "category_id": 1,
+        "bbox": [
+          556.7760620117188,
+          503.3887634277344,
+          83.22393798828125,
+          80.71408081054688
+        ],
+        "score": 0.9146372079849243
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 123,
+    "file_name": "f-b2d6c95be077.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        433.394,
+        52.019,
+        86.431,
+        41.742
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 123,
+        "category_id": 1,
+        "bbox": [
+          434.8902282714844,
+          53.8036994934082,
+          85.46322631835938,
+          35.99105453491211
+        ],
+        "score": 0.39349424839019775
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/blue"
+  },
+  {
+    "image_id": 124,
+    "file_name": "f-b31ea8ac1874.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        436.715,
+        510.939,
+        94.805,
+        55.659
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 124,
+        "category_id": 1,
+        "bbox": [
+          437.3420104980469,
+          511.04119873046875,
+          93.07559204101562,
+          55.54412841796875
+        ],
+        "score": 0.8616527915000916
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 125,
+    "file_name": "f-b383688994f8.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        520.628,
+        464.702,
+        118.058,
+        72.531
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 125,
+        "category_id": 1,
+        "bbox": [
+          521.8546142578125,
+          467.2550964355469,
+          118.1453857421875,
+          68.04360961914062
+        ],
+        "score": 0.8725740313529968
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 126,
+    "file_name": "f-b395c3b0e4e5.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        76.671,
+        490.97,
+        131.357,
+        72.596
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 126,
+        "category_id": 1,
+        "bbox": [
+          76.2833480834961,
+          489.0420837402344,
+          135.2574691772461,
+          74.60250854492188
+        ],
+        "score": 0.8962904214859009
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 127,
+    "file_name": "f-b434e6427a52.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        879.872,
+        656.572,
+        241.963,
+        79.215
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 127,
+        "category_id": 1,
+        "bbox": [
+          881.7976684570312,
+          652.691650390625,
+          264.89385986328125,
+          85.873291015625
+        ],
+        "score": 0.8348491787910461
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 128,
+    "file_name": "f-b5ef52da742e.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 129,
+    "file_name": "f-b7e0306604f3.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        536.61,
+        738.616,
+        176.346,
+        96.189
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 130,
+    "file_name": "f-b8fe21d51d1e.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        204.605,
+        510.753,
+        270.486,
+        102.531
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 130,
+        "category_id": 1,
+        "bbox": [
+          213.47689819335938,
+          510.5298156738281,
+          257.7430114746094,
+          98.06997680664062
+        ],
+        "score": 0.8699288964271545
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 131,
+    "file_name": "f-bddca2229f89.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 132,
+    "file_name": "f-bee3c8b755ca.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        3.074,
+        442.17,
+        421.275,
+        274.88
+      ],
+      [
+        1.401,
+        455.738,
+        176.272,
+        112.638
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 132,
+        "category_id": 1,
+        "bbox": [
+          4.3255720138549805,
+          458.3897705078125,
+          156.69687366485596,
+          125.1961669921875
+        ],
+        "score": 0.5089493989944458
+      },
+      {
+        "image_id": 132,
+        "category_id": 1,
+        "bbox": [
+          0.0,
+          495.83740234375,
+          435.3818664550781,
+          216.4886474609375
+        ],
+        "score": 0.494990736246109
+      },
+      {
+        "image_id": 132,
+        "category_id": 1,
+        "bbox": [
+          3.0437886714935303,
+          458.8345031738281,
+          134.74327492713928,
+          100.68380737304688
+        ],
+        "score": 0.3471876382827759
+      },
+      {
+        "image_id": 132,
+        "category_id": 1,
+        "bbox": [
+          27.139196395874023,
+          538.6190185546875,
+          398.2059268951416,
+          158.14691162109375
+        ],
+        "score": 0.2570553421974182
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 133,
+    "file_name": "f-bf1fd90ee400.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 134,
+    "file_name": "f-c6f24dc1add8.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 135,
+    "file_name": "f-c730c924ca10.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        156.295,
+        557.688,
+        192.551,
+        61.734
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 135,
+        "category_id": 1,
+        "bbox": [
+          155.74166870117188,
+          552.0018310546875,
+          195.75653076171875,
+          70.60662841796875
+        ],
+        "score": 0.8226402997970581
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 136,
+    "file_name": "f-c887463f75da.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        513.121,
+        506.801,
+        70.083,
+        50.615
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 136,
+        "category_id": 1,
+        "bbox": [
+          509.2529296875,
+          507.886962890625,
+          76.6456298828125,
+          49.40631103515625
+        ],
+        "score": 0.8066425323486328
+      },
+      {
+        "image_id": 136,
+        "category_id": 1,
+        "bbox": [
+          573.4522705078125,
+          422.5528259277344,
+          65.551025390625,
+          46.37750244140625
+        ],
+        "score": 0.6240324378013611
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/blue"
+  },
+  {
+    "image_id": 137,
+    "file_name": "f-c95e7e94e5a3.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        906.277,
+        768.793,
+        207.466,
+        106.563
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 138,
+    "file_name": "f-c9a223ccc808.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        567.73,
+        639.598,
+        271.592,
+        98.075
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 138,
+        "category_id": 1,
+        "bbox": [
+          569.2115478515625,
+          627.0361938476562,
+          278.69049072265625,
+          107.41455078125
+        ],
+        "score": 0.8539959192276001
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 139,
+    "file_name": "f-cc3869c26108.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        425.128,
+        500.572,
+        69.304,
+        65.41
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 139,
+        "category_id": 1,
+        "bbox": [
+          423.8210144042969,
+          497.7940979003906,
+          77.04275512695312,
+          68.34494018554688
+        ],
+        "score": 0.7671055793762207
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/blue"
+  },
+  {
+    "image_id": 140,
+    "file_name": "f-ccd9b0f261f0.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/blue"
+  },
+  {
+    "image_id": 141,
+    "file_name": "f-cda390e9d0fd.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        468.623,
+        660.992,
+        284.847,
+        80.353
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 141,
+        "category_id": 1,
+        "bbox": [
+          473.5799560546875,
+          660.4095458984375,
+          269.491455078125,
+          86.9942626953125
+        ],
+        "score": 0.8178428411483765
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 142,
+    "file_name": "f-cde14277a257.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 143,
+    "file_name": "f-cf9484f92b86.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        1082.623,
+        771.622,
+        173.517,
+        66.012
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 144,
+    "file_name": "f-d00722f6a34a.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        471.545,
+        518.157,
+        77.733,
+        52.607
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 144,
+        "category_id": 1,
+        "bbox": [
+          470.5025939941406,
+          520.1471557617188,
+          76.63735961914062,
+          48.5108642578125
+        ],
+        "score": 0.862680971622467
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 145,
+    "file_name": "f-d29b8d554f55.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        432.094,
+        506.326,
+        78.075,
+        42.516
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 145,
+        "category_id": 1,
+        "bbox": [
+          432.21331787109375,
+          507.4239501953125,
+          76.52166748046875,
+          42.90936279296875
+        ],
+        "score": 0.8443779945373535
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 146,
+    "file_name": "f-d34a041c0954.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        873.585,
+        531.231,
+        150.415,
+        58.45
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 146,
+        "category_id": 1,
+        "bbox": [
+          872.663330078125,
+          526.7533569335938,
+          144.17547607421875,
+          59.5128173828125
+        ],
+        "score": 0.8118674159049988
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 147,
+    "file_name": "f-d34e35996d16.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        795.943,
+        793.312,
+        188.606,
+        92.417
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 148,
+    "file_name": "f-d3ff148e7936.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 149,
+    "file_name": "f-d43cfdddfb87.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        465.699,
+        601.784,
+        90.396,
+        42.626
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 149,
+        "category_id": 1,
+        "bbox": [
+          461.75885009765625,
+          602.560791015625,
+          92.61444091796875,
+          39.93365478515625
+        ],
+        "score": 0.33996349573135376
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 150,
+    "file_name": "f-dd16451f1256.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        471.552,
+        759.696,
+        150.873,
+        58.135
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 150,
+        "category_id": 1,
+        "bbox": [
+          457.8370361328125,
+          756.303955078125,
+          142.359130859375,
+          65.83380126953125
+        ],
+        "score": 0.3590567409992218
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 151,
+    "file_name": "f-dd9e651f5dc2.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        779.911,
+        795.198,
+        196.15,
+        73.557
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 152,
+    "file_name": "f-df8150b04627.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        957.2,
+        747.103,
+        174.46,
+        77.329
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 153,
+    "file_name": "f-e1c00b1547cf.png",
+    "width": 1280,
+    "height": 720,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        434.001,
+        63.081,
+        174.721,
+        70.042
+      ],
+      [
+        782.674,
+        133.124,
+        81.588,
+        73.121
+      ],
+      [
+        729.565,
+        237.033,
+        109.297,
+        68.503
+      ],
+      [
+        967.401,
+        305.535,
+        113.145,
+        74.66
+      ],
+      [
+        421.817,
+        392.511,
+        256.178,
+        123.132
+      ],
+      [
+        1120.571,
+        400.978,
+        100.061,
+        66.194
+      ],
+      [
+        1227.559,
+        211.633,
+        31.558,
+        55.418
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 153,
+        "category_id": 1,
+        "bbox": [
+          423.12042236328125,
+          386.42681884765625,
+          255.5885009765625,
+          129.57354736328125
+        ],
+        "score": 0.8468068242073059
+      },
+      {
+        "image_id": 153,
+        "category_id": 1,
+        "bbox": [
+          435.0992736816406,
+          67.61280059814453,
+          169.60226440429688,
+          66.43956756591797
+        ],
+        "score": 0.8415119051933289
+      },
+      {
+        "image_id": 153,
+        "category_id": 1,
+        "bbox": [
+          786.0164794921875,
+          130.4883270263672,
+          71.92742919921875,
+          77.79924011230469
+        ],
+        "score": 0.634198009967804
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 154,
+    "file_name": "f-e2fca896dd4e.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 155,
+    "file_name": "f-e374b65fbdcd.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        509.053,
+        514.086,
+        74.076,
+        43.982
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 155,
+        "category_id": 1,
+        "bbox": [
+          505.2857666015625,
+          515.9178466796875,
+          77.771484375,
+          40.8651123046875
+        ],
+        "score": 0.7532053589820862
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 156,
+    "file_name": "f-e3f8c03c4f3d.png",
+    "width": 1280,
+    "height": 720,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        985.104,
+        0.385,
+        73.121,
+        33.867
+      ],
+      [
+        693.975,
+        509.365,
+        191.069,
+        64.024
+      ],
+      [
+        1230.637,
+        112.76,
+        47.721,
+        46.182
+      ],
+      [
+        352.077,
+        466.79,
+        172.255,
+        71.865
+      ],
+      [
+        1129.983,
+        30.013,
+        98.354,
+        167.414
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 156,
+        "category_id": 1,
+        "bbox": [
+          362.781005859375,
+          475.5989990234375,
+          152.2684326171875,
+          61.19610595703125
+        ],
+        "score": 0.8217088580131531
+      },
+      {
+        "image_id": 156,
+        "category_id": 1,
+        "bbox": [
+          674.2607421875,
+          510.7303771972656,
+          208.36456298828125,
+          92.57138061523438
+        ],
+        "score": 0.8062108755111694
+      },
+      {
+        "image_id": 156,
+        "category_id": 1,
+        "bbox": [
+          278.4007568359375,
+          498.32012939453125,
+          95.56405639648438,
+          49.139892578125
+        ],
+        "score": 0.7709165811538696
+      },
+      {
+        "image_id": 156,
+        "category_id": 1,
+        "bbox": [
+          1122.986328125,
+          30.215314865112305,
+          121.1746826171875,
+          171.1703052520752
+        ],
+        "score": 0.6411362886428833
+      },
+      {
+        "image_id": 156,
+        "category_id": 1,
+        "bbox": [
+          596.6668701171875,
+          58.50055694580078,
+          100.34930419921875,
+          48.84800720214844
+        ],
+        "score": 0.5898613929748535
+      },
+      {
+        "image_id": 156,
+        "category_id": 1,
+        "bbox": [
+          1229.222412109375,
+          92.47592163085938,
+          50.634765625,
+          64.42835998535156
+        ],
+        "score": 0.5582256317138672
+      },
+      {
+        "image_id": 156,
+        "category_id": 1,
+        "bbox": [
+          485.0703430175781,
+          502.47186279296875,
+          112.96896362304688,
+          61.47149658203125
+        ],
+        "score": 0.37313783168792725
+      },
+      {
+        "image_id": 156,
+        "category_id": 1,
+        "bbox": [
+          980.5664672851562,
+          0.0,
+          74.77386474609375,
+          38.6074333190918
+        ],
+        "score": 0.3670824468135834
+      },
+      {
+        "image_id": 156,
+        "category_id": 1,
+        "bbox": [
+          596.9512939453125,
+          60.7889289855957,
+          133.31280517578125,
+          48.89592361450195
+        ],
+        "score": 0.3127909004688263
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 157,
+    "file_name": "f-e47a23b8c69d.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 158,
+    "file_name": "f-e75e917b7bac.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        887.56,
+        727.747,
+        157.256,
+        58.412
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 158,
+        "category_id": 1,
+        "bbox": [
+          887.0050659179688,
+          729.6290283203125,
+          162.39788818359375,
+          58.8741455078125
+        ],
+        "score": 0.6713848114013672
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 159,
+    "file_name": "f-eb48de3570db.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 160,
+    "file_name": "f-ec673acb5ac7.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        924.295,
+        497.424,
+        99.527,
+        65.409
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 160,
+        "category_id": 1,
+        "bbox": [
+          922.232421875,
+          479.5416259765625,
+          101.62078857421875,
+          86.16302490234375
+        ],
+        "score": 0.7388719916343689
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 161,
+    "file_name": "f-ec89c9da2beb.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        495.936,
+        329.671,
+        142.75,
+        62.5
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 161,
+        "category_id": 1,
+        "bbox": [
+          494.0937194824219,
+          327.0471496582031,
+          143.81332397460938,
+          67.26016235351562
+        ],
+        "score": 0.8225888609886169
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 162,
+    "file_name": "f-ed9e33a4099a.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        492.906,
+        453.448,
+        147.094,
+        97.802
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 162,
+        "category_id": 1,
+        "bbox": [
+          480.7051696777344,
+          452.64471435546875,
+          157.35171508789062,
+          97.36566162109375
+        ],
+        "score": 0.8468032479286194
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/blue"
+  },
+  {
+    "image_id": 163,
+    "file_name": "f-edd0b84ea824.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        805.628,
+        665.49,
+        279.0,
+        109.231
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 163,
+        "category_id": 1,
+        "bbox": [
+          804.9473266601562,
+          669.1557006835938,
+          285.53717041015625,
+          92.63330078125
+        ],
+        "score": 0.8465286493301392
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 164,
+    "file_name": "f-edd3a46635a8.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        698.964,
+        432.75,
+        321.607,
+        188.045
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 164,
+        "category_id": 1,
+        "bbox": [
+          695.8062133789062,
+          426.9722900390625,
+          328.19378662109375,
+          200.388916015625
+        ],
+        "score": 0.7530806064605713
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 165,
+    "file_name": "f-eeac554af5ac.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        28.417,
+        507.713,
+        292.501,
+        135.227
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 165,
+        "category_id": 1,
+        "bbox": [
+          59.829627990722656,
+          517.3524780273438,
+          254.87120819091797,
+          111.21295166015625
+        ],
+        "score": 0.8153830170631409
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 166,
+    "file_name": "f-ef6a0fb0e806.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        426.49,
+        399.888,
+        212.196,
+        83.334
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 166,
+        "category_id": 1,
+        "bbox": [
+          426.4668884277344,
+          393.6332092285156,
+          213.53311157226562,
+          97.57965087890625
+        ],
+        "score": 0.8431838154792786
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/neutral"
+  },
+  {
+    "image_id": 167,
+    "file_name": "f-f1c95552750d.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 168,
+    "file_name": "f-f1e1e1bf15ba.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        79.971,
+        508.276,
+        138.041,
+        56.707
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 168,
+        "category_id": 1,
+        "bbox": [
+          80.15776062011719,
+          506.77960205078125,
+          140.1155548095703,
+          60.08538818359375
+        ],
+        "score": 0.8877936005592346
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 169,
+    "file_name": "f-f2933dba72d3.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        157.652,
+        561.112,
+        173.467,
+        77.838
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 169,
+        "category_id": 1,
+        "bbox": [
+          146.69644165039062,
+          559.4065551757812,
+          178.55923461914062,
+          77.2598876953125
+        ],
+        "score": 0.8240435123443604
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 170,
+    "file_name": "f-f31ffe5e8bbc.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 171,
+    "file_name": "f-f485e9f7b818.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 172,
+    "file_name": "f-f5f9f4ca913c.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 173,
+    "file_name": "f-f64ac6949acf.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        517.271,
+        468.951,
+        108.865,
+        80.216
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 173,
+        "category_id": 1,
+        "bbox": [
+          520.883544921875,
+          470.45867919921875,
+          108.768798828125,
+          79.60528564453125
+        ],
+        "score": 0.9080155491828918
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/medium/blue"
+  },
+  {
+    "image_id": 174,
+    "file_name": "f-f6d0cdf1c602.png",
+    "width": 1280,
+    "height": 720,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        526.905,
+        394.05,
+        198.811,
+        74.181
+      ],
+      [
+        1193.692,
+        260.123,
+        43.873,
+        56.188
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 174,
+        "category_id": 1,
+        "bbox": [
+          523.4573974609375,
+          394.57562255859375,
+          200.8558349609375,
+          78.55075073242188
+        ],
+        "score": 0.8393840789794922
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/medium/smooth/neutral"
+  },
+  {
+    "image_id": 175,
+    "file_name": "f-f72b31244f57.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        539.249,
+        509.059,
+        90.979,
+        35.004
+      ],
+      [
+        341.636,
+        545.65,
+        103.753,
+        47.651
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 175,
+        "category_id": 1,
+        "bbox": [
+          537.1619873046875,
+          505.6277770996094,
+          91.2880859375,
+          40.502838134765625
+        ],
+        "score": 0.8755937814712524
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 176,
+    "file_name": "f-f8be0c9a8617.png",
+    "width": 1024,
+    "height": 768,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        901.512,
+        523.881,
+        120.528,
+        74.963
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 176,
+        "category_id": 1,
+        "bbox": [
+          894.4887084960938,
+          510.78497314453125,
+          129.12835693359375,
+          93.68414306640625
+        ],
+        "score": 0.6367455124855042
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 177,
+    "file_name": "f-f92d2dac795d.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        832.721,
+        809.343,
+        198.036,
+        89.588
+      ]
+    ],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "false_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 178,
+    "file_name": "f-fd7365b29f3c.png",
+    "width": 768,
+    "height": 1024,
+    "ground_truth_has_fish": false,
+    "ground_truth_boxes": [],
+    "predicted_has_fish": false,
+    "predictions": [],
+    "status": "true_negative",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 179,
+    "file_name": "f-fdfddf87898a.png",
+    "width": 640,
+    "height": 848,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        527.138,
+        481.104,
+        96.558,
+        55.287
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 179,
+        "category_id": 1,
+        "bbox": [
+          528.2312622070312,
+          483.8558349609375,
+          98.67950439453125,
+          54.15771484375
+        ],
+        "score": 0.8554297089576721
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  },
+  {
+    "image_id": 180,
+    "file_name": "f-fe131c7a1f98.png",
+    "width": 1280,
+    "height": 960,
+    "ground_truth_has_fish": true,
+    "ground_truth_boxes": [
+      [
+        792.553,
+        677.023,
+        247.782,
+        87.043
+      ],
+      [
+        1173.679,
+        696.111,
+        102.891,
+        80.237
+      ]
+    ],
+    "predicted_has_fish": true,
+    "predictions": [
+      {
+        "image_id": 180,
+        "category_id": 1,
+        "bbox": [
+          797.2758178710938,
+          671.0231323242188,
+          242.26824951171875,
+          87.3907470703125
+        ],
+        "score": 0.8500284552574158
+      },
+      {
+        "image_id": 180,
+        "category_id": 1,
+        "bbox": [
+          1179.4794921875,
+          672.3531494140625,
+          99.343017578125,
+          114.7237548828125
+        ],
+        "score": 0.7430256605148315
+      }
+    ],
+    "status": "true_positive",
+    "condition": "mid/high/smooth/neutral"
+  }
+]

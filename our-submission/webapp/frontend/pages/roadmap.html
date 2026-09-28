@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roadmap — DeepVision</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="min-h-screen">
+
+<nav class="fixed top-0 inset-x-0 z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></div>
+      <span class="font-bold tracking-wide text-sm">DEEP<span class="text-cyan-400">VISION</span></span>
+    </a>
+    <div class="hidden md:flex gap-8">
+      <a href="/detector" class="navlink">AI DETECTOR</a>
+      <a href="/insights" class="navlink">INSIGHTS</a>
+      <a href="/game" class="navlink">GAME</a>
+      <a href="/impact" class="navlink">IMPACT</a>
+      <a href="/roadmap" class="navlink active">ROADMAP</a>
+      <a href="/tech" class="navlink">TECH</a>
+    </div>
+    <a href="/detector" class="text-xs font-bold bg-cyan-400 text-slate-900 px-4 py-2 rounded-lg">RUN LIVE DEMO</a>
+  </div>
+</nav>
+
+<section class="px-6 pt-28 pb-20 max-w-5xl mx-auto">
+  <span class="badge badge-future">ROADMAP · PROJECTION, NOT GUARANTEED</span>
+  <h2 class="text-3xl font-black mt-2 mb-8">One camera → many signals</h2>
+
+  <div class="grid md:grid-cols-4 gap-4 mb-16">
+    <div class="card p-5"><div class="text-xs text-cyan-400 font-bold mb-2">NOW</div><div class="font-bold mb-2">Fish detection</div><p class="text-xs text-slate-400">Single-image inference, human verification, deployed today.</p></div>
+    <div class="card p-5"><div class="text-xs text-cyan-400 font-bold mb-2">+2 YEARS</div><div class="font-bold mb-2">Multi-object detection</div><p class="text-xs text-slate-400">Fish + debris + vegetation, automated monitoring stations.</p></div>
+    <div class="card p-5"><div class="text-xs text-cyan-400 font-bold mb-2">+5 YEARS</div><div class="font-bold mb-2">Multi-site monitoring</div><p class="text-xs text-slate-400">Species recognition, anomaly detection, longitudinal biodiversity analytics.</p></div>
+    <div class="card p-5"><div class="text-xs text-cyan-400 font-bold mb-2">+10 YEARS</div><div class="font-bold mb-2">Autonomous ecosystem intelligence</div><p class="text-xs text-slate-400">Distributed camera networks, continuous monitoring, AI-assisted decisions.</p></div>
+  </div>
+
+  <!-- MARKET FORESIGHT CANVAS -->
+  <span class="badge badge-illustrative">MARKET FORESIGHT · ILLUSTRATIVE, NOT MEASURED</span>
+  <h3 class="text-2xl font-black mt-2 mb-1">From manual river monitoring to automated underwater intelligence</h3>
+  <p class="text-xs text-slate-400 mb-6 max-w-2xl">The trend line below is a directional forecast, not measured data — same honesty standard as the rest of this site.</p>
+
+  <div class="card p-6 mb-6">
+    <div class="relative">
+      <svg id="trendChart" viewBox="0 0 900 300" class="w-full h-auto" role="img" aria-label="Trend line: adoption of automated underwater monitoring rising from now to plus ten years">
+        <!-- recessive baseline grid -->
+        <line x1="60" y1="250" x2="860" y2="250" stroke="#1c3446" stroke-width="1"/>
+        <line x1="60" y1="40" x2="60" y2="250" stroke="#1c3446" stroke-width="1"/>
+
+        <!-- trend path: flat while manual review dominates, then accelerating -->
+        <path d="M 80 230 C 260 235, 380 220, 470 175 C 600 110, 700 70, 820 55"
+              fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+
+        <!-- vertical guide line for the selected/hovered milestone -->
+        <line id="guideLine" x1="80" y1="40" x2="80" y2="250" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 4" opacity="0"/>
+
+        <!-- milestone hit areas (larger, invisible, for easy hover/click) + visible markers -->
+        <g class="milestone" data-key="now" style="cursor:pointer">
+          <circle cx="80" cy="230" r="16" fill="transparent"/>
+          <circle class="marker" cx="80" cy="230" r="6" fill="#38bdf8"/>
+        </g>
+        <g class="milestone" data-key="y2" style="cursor:pointer">
+          <circle cx="470" cy="175" r="16" fill="transparent"/>
+          <circle class="marker" cx="470" cy="175" r="6" fill="#38bdf8"/>
+        </g>
+        <g class="milestone" data-key="y5" style="cursor:pointer">
+          <circle cx="700" cy="70" r="16" fill="transparent"/>
+          <circle class="marker" cx="700" cy="70" r="6" fill="#38bdf8"/>
+        </g>
+        <g class="milestone" data-key="y10" style="cursor:pointer">
+          <circle cx="820" cy="55" r="16" fill="transparent"/>
+          <circle class="marker" cx="820" cy="55" r="6" fill="#38bdf8"/>
+        </g>
+
+        <!-- year-by-year scrubber marker: drag this along the line -->
+        <g id="scrubHandle" style="cursor:grab">
+          <circle id="scrubHit" cx="80" cy="230" r="18" fill="transparent"/>
+          <circle id="scrubMarker" cx="80" cy="230" r="7" fill="#0c1c29" stroke="#22d3ee" stroke-width="3"/>
+        </g>
+
+        <!-- x-axis time labels -->
+        <text x="80" y="272" fill="#7fa0b3" font-size="12" text-anchor="middle">NOW</text>
+        <text x="470" y="272" fill="#7fa0b3" font-size="12" text-anchor="middle">+2 years</text>
+        <text x="700" y="272" fill="#7fa0b3" font-size="12" text-anchor="middle">+5 years</text>
+        <text x="820" y="272" fill="#7fa0b3" font-size="12" text-anchor="middle">+10 years</text>
+
+        <!-- milestone captions -->
+        <text x="80" y="20" fill="#e7f1f7" font-size="12" font-weight="700" text-anchor="start">Manual review bottleneck</text>
+        <text x="330" y="205" fill="#e7f1f7" font-size="12" font-weight="700" text-anchor="middle">Edge-AI pilots</text>
+        <text x="700" y="45" fill="#e7f1f7" font-size="12" font-weight="700" text-anchor="middle">Continuous WFD evidence expected</text>
+        <text x="820" y="95" fill="#e7f1f7" font-size="12" font-weight="700" text-anchor="end">Standard infrastructure</text>
+
+        <text x="30" y="150" fill="#7fa0b3" font-size="11" text-anchor="middle" transform="rotate(-90 30 150)">Adoption (illustrative)</text>
+      </svg>
+      <div id="chartTooltip" class="absolute hidden pointer-events-none glass rounded-lg px-3 py-2 text-xs" style="min-width:180px;"></div>
+    </div>
+    <p class="text-[11px] text-slate-500 mt-2 text-center">Drag the ringed marker along the line, year by year · or click a filled point for full details</p>
+
+    <div class="mt-4 border-t border-slate-800 pt-4 flex items-center justify-between">
+      <div class="text-sm font-bold text-cyan-400" id="yearReadout">Year 0 (NOW)</div>
+    </div>
+    <p id="yearBlurb" class="text-xs text-slate-400 mt-2"></p>
+  </div>
+
+  <div id="milestoneDetail" class="card p-6 mb-6">
+    <!-- filled by JS -->
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-6 mb-6">
+    <div class="card p-6">
+      <div class="font-bold mb-3">Market consequences <span class="badge badge-illustrative ml-1">IF THIS TREND UNFOLDS</span></div>
+      <ul class="text-xs text-slate-400 space-y-2 text-left">
+        <li><span class="text-emerald-400 font-bold">Opportunity —</span> manual-review firms shift from watching footage to verifying AI flags; more sites covered per reviewer</li>
+        <li><span class="text-emerald-400 font-bold">Opportunity —</span> continuous, comparable fish-passage data creates a market for standardized reporting</li>
+        <li><span class="text-amber-400 font-bold">Risk —</span> consolidation around whichever platform becomes the de-facto standard; smaller operators locked into one vendor</li>
+        <li><span class="text-amber-400 font-bold">Risk —</span> false confidence in automation without human oversight, undercounting edge cases like night/floods</li>
+      </ul>
+    </div>
+    <div class="card p-6">
+      <div class="font-bold mb-3">Desired future <span class="badge badge-future ml-1">WHAT WE WANT</span></div>
+      <ul class="text-xs text-slate-400 space-y-2 text-left">
+        <li>Every regulated fish-pass has continuous, low-cost, edge-deployed monitoring — adopted because it's cheaper and better, not mandated</li>
+        <li>Fish recall stays protected during floods, night, and peak migration instead of degrading invisibly</li>
+        <li>Monitoring data becomes an open, comparable evidence base for WFD reporting — not a closed platform</li>
+        <li>Ecologists spend time on verification and decisions, not staring at raw footage</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="text-xl font-black mb-6 mt-16">One camera → many signals</h3>
+  <div class="card p-8">
+    <div class="text-center font-bold mb-6">UNDERWATER CAMERA</div>
+    <div class="grid md:grid-cols-2 gap-4 text-sm">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2"><span class="text-cyan-400 font-bold">Fish</span><span class="text-slate-400">→ Biodiversity <span class="badge badge-measured ml-1">CURRENT</span></span></div>
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2"><span class="text-slate-300">Debris</span><span class="text-slate-400">→ Pollution monitoring <span class="badge badge-future ml-1">FUTURE</span></span></div>
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2"><span class="text-slate-300">Vegetation</span><span class="text-slate-400">→ Habitat monitoring <span class="badge badge-future ml-1">FUTURE</span></span></div>
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2"><span class="text-slate-300">Invasive species</span><span class="text-slate-400">→ Early warning <span class="badge badge-future ml-1">FUTURE</span></span></div>
+      <div class="flex items-center justify-between pb-2"><span class="text-slate-300">Infrastructure anomalies</span><span class="text-slate-400">→ Protection <span class="badge badge-future ml-1">FUTURE</span></span></div>
+    </div>
+  </div>
+
+  <h3 class="text-xl font-black mt-16 mb-6">Human-in-the-loop, always</h3>
+  <div class="card p-6 text-sm text-slate-300 font-mono space-y-1">
+    <div>AI → Detection → Confidence</div>
+    <div class="text-cyan-400">↓</div>
+    <div>Human verification</div>
+    <div class="text-cyan-400">↓</div>
+    <div>Environmental decision</div>
+  </div>
+  <p class="text-xs text-slate-400 mt-3">AI does not replace environmental scientists — it increases the amount and frequency of information available to them.</p>
+</section>
+
+<footer class="px-6 py-10 text-center text-xs text-slate-600">Built on the real TalTech Fish vs Debris Hackathon dataset · EIT Water Hackathon Munich 2026</footer>
+
+<script src="/static/common.js"></script>
+<script>
+const MILESTONES = {
+  now: {
+    label: 'NOW', title: 'Manual review bottleneck',
+    x: 80, y: 230,
+    technology: 'YOLOv8n fine-tuned on 840 labeled frames, single class (fish), running locally.',
+    business: 'Real benchmark: F2 0.809, 97.8% no-fish rejection — cuts manual review load per camera today.',
+    environmental: 'Supports WFD fish-passage evidence; protects fish recall during hard conditions.',
+    next: 'More night-condition training data; real edge-device (Jetson/RPi) benchmarking.',
+  },
+  y2: {
+    label: '+2 YEARS', title: 'Edge-AI pilots replace motion triggers',
+    x: 470, y: 175,
+    technology: 'Multi-object detection (fish + debris + vegetation), automated monitoring stations.',
+    business: 'One device covers more failure modes per site — fewer separate sensors needed.',
+    environmental: 'Early debris/pollution signal alongside fish data, not just fish counts.',
+    next: 'New labeled datasets for debris/vegetation classes; pilots at 1-2 real fish-pass sites.',
+  },
+  y5: {
+    label: '+5 YEARS', title: 'Continuous WFD evidence expected',
+    x: 700, y: 70,
+    technology: 'Multi-site monitoring network, species recognition, anomaly detection, longitudinal analytics.',
+    business: 'Standardized, comparable reporting across sites — a benchmarking market, like carbon reporting.',
+    environmental: 'Longitudinal biodiversity trend data supports WFD "good ecological status" tracking over time.',
+    next: 'Open reporting standards to avoid vendor lock-in; species-level validation with domain experts.',
+  },
+  y10: {
+    label: '+10 YEARS', title: 'Standard infrastructure at regulated sites',
+    x: 820, y: 55,
+    technology: 'Autonomous ecosystem intelligence, distributed camera networks, continuous monitoring.',
+    business: 'Monitoring becomes standard infrastructure cost, not a special project — recurring platform/service model.',
+    environmental: 'Continuous ecosystem-wide evidence base for water policy and restoration decisions.',
+    next: 'Shared infrastructure standards; long-term funding/ownership model across many sites.',
+  },
+};
+
+const svg = document.getElementById('trendChart');
+const tooltip = document.getElementById('chartTooltip');
+const guideLine = document.getElementById('guideLine');
+const detailPanel = document.getElementById('milestoneDetail');
+let pinnedKey = null;
+
+function renderDetail(key){
+  const m = MILESTONES[key];
+  detailPanel.innerHTML = `
+    <div class="flex items-center gap-2 mb-4">
+      <span class="badge badge-illustrative">${m.label}</span>
+      <div class="font-bold">${m.title}</div>
+    </div>
+    <div class="grid md:grid-cols-4 gap-4 text-xs text-slate-400 text-left">
+      <div><div class="text-cyan-400 font-bold mb-1">Technology</div>${m.technology}</div>
+      <div><div class="text-cyan-400 font-bold mb-1">Business value</div>${m.business}</div>
+      <div><div class="text-cyan-400 font-bold mb-1">Environmental value</div>${m.environmental}</div>
+      <div><div class="text-cyan-400 font-bold mb-1">Required next</div>${m.next}</div>
+    </div>`;
+}
+
+function showTooltip(key, evt){
+  const m = MILESTONES[key];
+  tooltip.innerHTML = `<div class="font-bold text-cyan-400 mb-1">${m.label}</div><div class="text-slate-200">${m.title}</div><div class="text-slate-500 mt-1">Click for full details</div>`;
+  tooltip.classList.remove('hidden');
+  const rect = svg.getBoundingClientRect();
+  const wrap = svg.parentElement.getBoundingClientRect();
+  const px = rect.left - wrap.left + (m.x / 900) * rect.width;
+  const py = rect.top - wrap.top + (m.y / 300) * rect.height;
+  tooltip.style.left = Math.min(px + 14, wrap.width - 190) + 'px';
+  tooltip.style.top = Math.max(py - 50, 0) + 'px';
+}
+
+function hideTooltip(){
+  if(!pinnedKey) tooltip.classList.add('hidden');
+}
+
+function setGuide(m){
+  guideLine.setAttribute('x1', m.x);
+  guideLine.setAttribute('x2', m.x);
+  guideLine.setAttribute('opacity', '1');
+}
+
+document.querySelectorAll('.milestone').forEach(g=>{
+  const key = g.dataset.key;
+  const marker = g.querySelector('.marker');
+  g.addEventListener('mouseenter', ()=>{
+    marker.setAttribute('r', '8');
+    setGuide(MILESTONES[key]);
+    showTooltip(key);
+  });
+  g.addEventListener('mouseleave', ()=>{
+    if(pinnedKey !== key) marker.setAttribute('r', '6');
+    if(!pinnedKey) guideLine.setAttribute('opacity', '0');
+    hideTooltip();
+  });
+  g.addEventListener('click', ()=>{
+    document.querySelectorAll('.milestone .marker').forEach(mk=>mk.setAttribute('r','6'));
+    marker.setAttribute('r', '9');
+    pinnedKey = key;
+    setGuide(MILESTONES[key]);
+    renderDetail(key);
+    detailPanel.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+});
+
+renderDetail('now');
+
+// ---- Year-by-year scrubber (drag directly on the chart) ----
+const trendPath = svg.querySelector('path');
+const scrubHandle = document.getElementById('scrubHandle');
+const scrubMarker = document.getElementById('scrubMarker');
+const scrubHit = document.getElementById('scrubHit');
+const yearReadout = document.getElementById('yearReadout');
+const yearBlurb = document.getElementById('yearBlurb');
+
+// sample the real curve densely so we can look up y for any x on it
+const pathLen = trendPath.getTotalLength();
+const SAMPLES = 400;
+const curvePoints = [];
+for(let i=0;i<=SAMPLES;i++){
+  curvePoints.push(trendPath.getPointAtLength((i/SAMPLES)*pathLen));
+}
+function yOnCurveForX(targetX){
+  let best = curvePoints[0];
+  for(const p of curvePoints){
+    if(Math.abs(p.x - targetX) < Math.abs(best.x - targetX)) best = p;
+  }
+  return best.y;
+}
+
+// known year -> x anchors, matching the milestone positions on the chart
+const YEAR_X_ANCHORS = [[0,80],[2,470],[5,700],[10,820]];
+function yearToX(year){
+  for(let i=0;i<YEAR_X_ANCHORS.length-1;i++){
+    const [y0,x0] = YEAR_X_ANCHORS[i], [y1,x1] = YEAR_X_ANCHORS[i+1];
+    if(year >= y0 && year <= y1){
+      const t = (year - y0) / (y1 - y0);
+      return x0 + t * (x1 - x0);
+    }
+  }
+  return YEAR_X_ANCHORS[YEAR_X_ANCHORS.length-1][1];
+}
+
+const YEAR_BLURBS = {
+  0: 'NOW — manual review is the bottleneck. Motion-triggered cameras generate thousands of false alerts a day.',
+  1: 'Early exploration — proof-of-concept detectors like this one get validated against real hard-negative footage.',
+  2: '+2 years — edge-AI pilots begin replacing motion-only triggers at individual fish-pass sites.',
+  3: 'Scaling pilots — more sites adopt edge AI; debris and vegetation classes start getting added.',
+  4: 'Approaching standardization — early comparable reporting formats start being tested across sites.',
+  5: '+5 years — multi-site monitoring networks; WFD reporting increasingly expects continuous evidence, not periodic surveys.',
+  6: 'Reporting formats and edge-deployment patterns start converging across vendors.',
+  7: 'Species-level recognition and anomaly detection mature enough for wider rollout.',
+  8: 'Shared monitoring infrastructure standards start being discussed industry-wide.',
+  9: 'Most regulated sites have some form of automated monitoring in place.',
+  10: '+10 years — automated underwater monitoring is standard infrastructure at regulated sites, not a special project.',
+};
+
+function xToYear(x){
+  for(let i=0;i<YEAR_X_ANCHORS.length-1;i++){
+    const [y0,x0] = YEAR_X_ANCHORS[i], [y1,x1] = YEAR_X_ANCHORS[i+1];
+    if(x >= x0 && x <= x1){
+      const t = (x - x0) / (x1 - x0);
+      return y0 + t * (y1 - y0);
+    }
+  }
+  return x <= YEAR_X_ANCHORS[0][1] ? YEAR_X_ANCHORS[0][0] : YEAR_X_ANCHORS[YEAR_X_ANCHORS.length-1][0];
+}
+
+function updateYear(rawYear){
+  const year = Math.max(0, Math.min(10, rawYear));
+  const x = yearToX(year);
+  const y = yOnCurveForX(x);
+  scrubMarker.setAttribute('cx', x);
+  scrubMarker.setAttribute('cy', y);
+  scrubHit.setAttribute('cx', x);
+  scrubHit.setAttribute('cy', y);
+
+  const displayYear = Math.round(year);
+  yearReadout.textContent = displayYear === 0 ? 'Year 0 (NOW)' : `Year +${displayYear}`;
+  yearBlurb.textContent = YEAR_BLURBS[displayYear];
+
+  document.querySelectorAll('.milestone').forEach(g=>{
+    const isMatch =
+      (displayYear===0 && g.dataset.key==='now') ||
+      (displayYear===2 && g.dataset.key==='y2') ||
+      (displayYear===5 && g.dataset.key==='y5') ||
+      (displayYear===10 && g.dataset.key==='y10');
+    g.querySelector('.marker').setAttribute('r', isMatch ? '9' : '6');
+  });
+}
+
+// ---- drag handlers ----
+let dragging = false;
+
+function svgXFromClientX(clientX){
+  const rect = svg.getBoundingClientRect();
+  const relX = (clientX - rect.left) / rect.width;
+  return Math.max(80, Math.min(820, relX * 900));
+}
+
+function startDrag(e){
+  dragging = true;
+  scrubHandle.style.cursor = 'grabbing';
+  moveDrag(e);
+  e.preventDefault();
+}
+function moveDrag(e){
+  if(!dragging) return;
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  updateYear(xToYear(svgXFromClientX(clientX)));
+}
+function endDrag(){
+  dragging = false;
+  scrubHandle.style.cursor = 'grab';
+}
+
+scrubHandle.addEventListener('mousedown', startDrag);
+window.addEventListener('mousemove', moveDrag);
+window.addEventListener('mouseup', endDrag);
+scrubHandle.addEventListener('touchstart', startDrag, {passive:false});
+window.addEventListener('touchmove', moveDrag, {passive:false});
+window.addEventListener('touchend', endDrag);
+
+updateYear(0);
+</script>
+</body>
+</html>

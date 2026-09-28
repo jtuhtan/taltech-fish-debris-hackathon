@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Impact & ROI — DeepVision</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="min-h-screen">
+
+<nav class="fixed top-0 inset-x-0 z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></div>
+      <span class="font-bold tracking-wide text-sm">DEEP<span class="text-cyan-400">VISION</span></span>
+    </a>
+    <div class="hidden md:flex gap-8">
+      <a href="/detector" class="navlink">AI DETECTOR</a>
+      <a href="/insights" class="navlink">INSIGHTS</a>
+      <a href="/game" class="navlink">GAME</a>
+      <a href="/impact" class="navlink active">IMPACT</a>
+      <a href="/roadmap" class="navlink">ROADMAP</a>
+      <a href="/tech" class="navlink">TECH</a>
+    </div>
+    <a href="/detector" class="text-xs font-bold bg-cyan-400 text-slate-900 px-4 py-2 rounded-lg">RUN LIVE DEMO</a>
+  </div>
+</nav>
+
+<section class="px-6 pt-28 pb-20 max-w-5xl mx-auto">
+  <span class="badge badge-illustrative">ILLUSTRATIVE SCENARIO</span>
+  <h2 class="text-3xl font-black mt-2 mb-2">What is the value of seeing underwater?</h2>
+  <p class="text-slate-400 mb-8 max-w-2xl">Adjust the assumptions to your organization. These are scenario calculations, not measured savings for any real deployment.</p>
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="card p-6 space-y-4">
+      <div><label class="text-xs text-slate-400">Monitoring sites</label><input type="range" min="1" max="50" value="5" id="roiSites" class="w-full"><div class="text-sm" id="roiSitesVal">5</div></div>
+      <div><label class="text-xs text-slate-400">Manual inspections / site / year</label><input type="range" min="1" max="52" value="12" id="roiInspections" class="w-full"><div class="text-sm" id="roiInspectionsVal">12</div></div>
+      <div><label class="text-xs text-slate-400">Cost per inspection (€)</label><input type="range" min="50" max="2000" step="50" value="400" id="roiCost" class="w-full"><div class="text-sm" id="roiCostVal">€400</div></div>
+      <div><label class="text-xs text-slate-400">Assumed automation coverage (%)</label><input type="range" min="0" max="90" value="40" id="roiAuto" class="w-full"><div class="text-sm" id="roiAutoVal">40%</div></div>
+    </div>
+    <div class="card p-6 flex flex-col justify-center text-center space-y-4">
+      <div><div class="text-xs text-slate-400">Current annual monitoring cost</div><div class="text-3xl font-black stat-num" id="roiCurrent">€0</div></div>
+      <div class="text-slate-500">↓</div>
+      <div><div class="text-xs text-slate-400">Illustrative potential savings</div><div class="text-3xl font-black text-emerald-400 stat-num" id="roiSavings">€0</div></div>
+      <div class="text-slate-500">↓</div>
+      <div><div class="text-xs text-slate-400">Remaining cost</div><div class="text-3xl font-black stat-num" id="roiRemaining">€0</div></div>
+    </div>
+  </div>
+
+  <h3 class="text-2xl font-black mt-16 mb-6">Business use cases <span class="badge badge-illustrative ml-2">POTENTIAL, NOT CURRENT CAPABILITY</span></h3>
+  <div class="grid md:grid-cols-2 gap-4">
+    <div class="card p-5"><div class="font-bold mb-1">Offshore wind + artificial reefs</div><p class="text-xs text-slate-400">Continuous monitoring to track biodiversity trends after restoration/mitigation measures.</p></div>
+    <div class="card p-5"><div class="font-bold mb-1">River / bridge / infrastructure mitigation</div><p class="text-xs text-slate-400">Documenting ecological conditions around mitigation sites, reducing manual inspection effort.</p></div>
+    <div class="card p-5"><div class="font-bold mb-1">Data center water infrastructure</div><p class="text-xs text-slate-400"><span class="text-cyan-400">Current:</span> fish detection. <span class="text-cyan-400">Future:</span> multi-object underwater anomaly detection for water intake protection.</p></div>
+    <div class="card p-5"><div class="font-bold mb-1">Invasive species monitoring</div><p class="text-xs text-slate-400">Human-in-the-loop: camera → AI flag → human verification → eDNA/field sampling → confirmed species.</p></div>
+    <div class="card p-5"><div class="font-bold mb-1">Marine debris / plastic</div><p class="text-xs text-slate-400">Future model expansion — same infrastructure, new training data.</p></div>
+    <div class="card p-5"><div class="font-bold mb-1">Water quality / ecosystem health</div><p class="text-xs text-slate-400">Visual observations are a potential ecological indicator, not a lab measurement — requires scientific validation.</p></div>
+  </div>
+</section>
+
+<footer class="px-6 py-10 text-center text-xs text-slate-600">Built on the real TalTech Fish vs Debris Hackathon dataset · EIT Water Hackathon Munich 2026</footer>
+
+<script src="/static/common.js"></script>
+<script>
+function updateROI(){
+  const sites = +document.getElementById('roiSites').value;
+  const insp = +document.getElementById('roiInspections').value;
+  const cost = +document.getElementById('roiCost').value;
+  const auto = +document.getElementById('roiAuto').value / 100;
+  document.getElementById('roiSitesVal').textContent = sites;
+  document.getElementById('roiInspectionsVal').textContent = insp;
+  document.getElementById('roiCostVal').textContent = '€'+cost;
+  document.getElementById('roiAutoVal').textContent = (auto*100)+'%';
+  const current = sites*insp*cost;
+  const savings = current*auto;
+  document.getElementById('roiCurrent').textContent = '€'+current.toLocaleString();
+  document.getElementById('roiSavings').textContent = '€'+Math.round(savings).toLocaleString();
+  document.getElementById('roiRemaining').textContent = '€'+Math.round(current-savings).toLocaleString();
+}
+['roiSites','roiInspections','roiCost','roiAuto'].forEach(id=>document.getElementById(id).addEventListener('input', updateROI));
+updateROI();
+</script>
+</body>
+</html>

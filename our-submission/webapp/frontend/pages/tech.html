@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Technical Architecture — DeepVision</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="min-h-screen">
+
+<nav class="fixed top-0 inset-x-0 z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></div>
+      <span class="font-bold tracking-wide text-sm">DEEP<span class="text-cyan-400">VISION</span></span>
+    </a>
+    <div class="hidden md:flex gap-8">
+      <a href="/detector" class="navlink">AI DETECTOR</a>
+      <a href="/insights" class="navlink">INSIGHTS</a>
+      <a href="/game" class="navlink">GAME</a>
+      <a href="/impact" class="navlink">IMPACT</a>
+      <a href="/roadmap" class="navlink">ROADMAP</a>
+      <a href="/tech" class="navlink active">TECH</a>
+    </div>
+    <a href="/detector" class="text-xs font-bold bg-cyan-400 text-slate-900 px-4 py-2 rounded-lg">RUN LIVE DEMO</a>
+  </div>
+</nav>
+
+<section class="px-6 pt-28 pb-20 max-w-5xl mx-auto">
+  <span class="badge badge-measured">CURRENT IMPLEMENTATION</span>
+  <h2 class="text-3xl font-black mt-2 mb-8">Technical Architecture</h2>
+  <div class="card p-6 font-mono text-sm text-slate-300 space-y-1">
+    <div>UNDERWATER CAMERA</div><div class="text-cyan-400">↓</div>
+    <div>IMAGE INPUT (upload / test set)</div><div class="text-cyan-400">↓</div>
+    <div>YOLOv8n (COCO-pretrained, fine-tuned on 840 labeled frames)</div><div class="text-cyan-400">↓</div>
+    <div>DETECTIONS (bbox + confidence, conf ≥ 0.25)</div><div class="text-cyan-400">↓</div>
+    <div>FastAPI backend + annotated-image storage</div><div class="text-cyan-400">↓</div>
+    <div>Dashboard (this site)</div>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-4 mt-6 text-sm">
+    <div class="card p-4"><div class="text-slate-400 text-xs mb-1">Model size</div><div class="font-bold">5.97 MB</div><div class="badge badge-measured mt-2 inline-block">MEASURED</div></div>
+    <div class="card p-4"><div class="text-slate-400 text-xs mb-1">p50 / p95 latency</div><div class="font-bold">18.4 ms / 27.7 ms</div><div class="badge badge-measured mt-2 inline-block">MEASURED</div></div>
+    <div class="card p-4"><div class="text-slate-400 text-xs mb-1">Hardware</div><div class="font-bold">Apple M4 (MPS)</div><div class="badge badge-measured mt-2 inline-block">MEASURED</div></div>
+  </div>
+
+  <h3 class="text-xl font-black mt-16 mb-4">Stack</h3>
+  <div class="grid md:grid-cols-2 gap-4 text-sm">
+    <div class="card p-5"><div class="font-bold mb-2">Frontend</div><p class="text-xs text-slate-400">Multi-page site (this one) — HTML + Tailwind + vanilla JS, served by FastAPI.</p></div>
+    <div class="card p-5"><div class="font-bold mb-2">Backend</div><p class="text-xs text-slate-400">FastAPI (Python), <code>backend/inference.py</code> isolates the real model behind <code>load_model()</code> / <code>predict()</code> / <code>annotate_image()</code>.</p></div>
+    <div class="card p-5"><div class="font-bold mb-2">Model</div><p class="text-xs text-slate-400">Ultralytics YOLOv8n, COCO-pretrained, fine-tuned on the TalTech dataset (20 epochs, single class: fish).</p></div>
+    <div class="card p-5"><div class="font-bold mb-2">Storage</div><p class="text-xs text-slate-400">Annotated uploads saved to <code>webapp/uploads/</code>; frozen test-set results in <code>submission/predictions.json</code>.</p></div>
+  </div>
+
+  <div class="mt-8 card p-5 text-sm">
+    <span class="badge badge-future mr-2">FUTURE</span>Multi-class underwater computer vision (debris, vegetation, invasive species) — same pipeline, additional training data and classes.
+  </div>
+</section>
+
+<footer class="px-6 py-10 text-center text-xs text-slate-600">Built on the real TalTech Fish vs Debris Hackathon dataset · EIT Water Hackathon Munich 2026</footer>
+</body>
+</html>

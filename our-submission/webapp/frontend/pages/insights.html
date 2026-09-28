@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Insights — DeepVision</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="min-h-screen">
+
+<nav class="fixed top-0 inset-x-0 z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></div>
+      <span class="font-bold tracking-wide text-sm">DEEP<span class="text-cyan-400">VISION</span></span>
+    </a>
+    <div class="hidden md:flex gap-8">
+      <a href="/detector" class="navlink">AI DETECTOR</a>
+      <a href="/insights" class="navlink active">INSIGHTS</a>
+      <a href="/game" class="navlink">GAME</a>
+      <a href="/impact" class="navlink">IMPACT</a>
+      <a href="/roadmap" class="navlink">ROADMAP</a>
+      <a href="/tech" class="navlink">TECH</a>
+    </div>
+    <a href="/detector" class="text-xs font-bold bg-cyan-400 text-slate-900 px-4 py-2 rounded-lg">RUN LIVE DEMO</a>
+  </div>
+</nav>
+
+<section class="px-6 pt-28 pb-20 max-w-6xl mx-auto">
+  <span class="badge badge-measured">MEASURED ON THE HELD-OUT TEST SPLIT</span>
+  <h2 class="text-3xl font-black mt-2 mb-2">Environmental Intelligence Dashboard</h2>
+  <p class="text-slate-400 mb-8 max-w-2xl">Real metrics from the frozen model, at the official scored operating point (confidence 0.25, IoU 0.50). No species classification is implemented — these are fish detections, not identified species.</p>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8" id="metricGrid"></div>
+
+  <div class="card p-6">
+    <h3 class="font-bold mb-4">Detection quality by time of day <span class="badge badge-measured ml-2">MEASURED</span></h3>
+    <div id="bandChart" class="space-y-3"></div>
+  </div>
+
+  <div class="card p-6 mt-6">
+    <h3 class="font-bold mb-2">Real Results Gallery <span class="badge badge-measured ml-2">MEASURED</span></h3>
+    <p class="text-xs text-slate-400 mb-4">Every one of the 180 test-set images, with the model's real prediction vs. the real ground truth.</p>
+    <div class="flex gap-2 mb-4 text-xs flex-wrap" id="galleryFilters">
+      <button data-f="all" class="px-3 py-1.5 rounded-full border border-cyan-400 text-cyan-400">All</button>
+      <button data-f="true_positive" class="px-3 py-1.5 rounded-full border border-slate-600 text-slate-300">Correct fish (TP)</button>
+      <button data-f="true_negative" class="px-3 py-1.5 rounded-full border border-slate-600 text-slate-300">Correct rejection (TN)</button>
+      <button data-f="false_negative" class="px-3 py-1.5 rounded-full border border-slate-600 text-slate-300">Missed fish (FN)</button>
+      <button data-f="false_positive" class="px-3 py-1.5 rounded-full border border-slate-600 text-slate-300">False alarm (FP)</button>
+    </div>
+    <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 max-h-[480px] overflow-y-auto pr-1"></div>
+  </div>
+</section>
+
+<footer class="px-6 py-10 text-center text-xs text-slate-600">Built on the real TalTech Fish vs Debris Hackathon dataset · EIT Water Hackathon Munich 2026</footer>
+
+<script src="/static/common.js"></script>
+<script>
+let galleryData = [], metricsData = {};
+
+async function loadAll(){
+  const [g, m] = await Promise.all([
+    fetch('/api/gallery').then(r=>r.json()),
+    fetch('/api/metrics').then(r=>r.json()),
+  ]);
+  galleryData = g; metricsData = m;
+  renderMetrics(); renderBands(); renderGallery('all');
+}
+
+function renderMetrics(){
+  const items = [
+    ['Fish F2', pct(metricsData.f2)],
+    ['No-fish rejection', pct(metricsData.no_fish_rejection_rate)],
+    ['Precision', pct(metricsData.precision)],
+    ['Recall', pct(metricsData.recall)],
+    ['mAP50', pct(metricsData.coco_map_50)],
+    ['mAP50-95', pct(metricsData.coco_map_50_95)],
+    ['Model size', metricsData.model_size_mb + ' MB'],
+    ['p50 latency', metricsData.latency_p50_ms + ' ms'],
+  ];
+  document.getElementById('metricGrid').innerHTML = items.map(([label,val])=>`
+    <div class="card p-4">
+      <div class="text-xs text-slate-400 mb-1">${label}</div>
+      <div class="text-xl font-black text-cyan-400">${val}</div>
+      <div class="badge badge-measured mt-2 inline-block">MEASURED</div>
+    </div>`).join('');
+}
+
+function renderBands(){
+  const bands = metricsData.time_bands || {};
+  const order = ['dawn','day','dusk','night'];
+  document.getElementById('bandChart').innerHTML = order.filter(b=>bands[b]).map(b=>{
+    const f2 = bands[b].f2;
+    return `<div>
+      <div class="flex justify-between text-xs text-slate-400 mb-1"><span class="capitalize">${b}</span><span>F2 ${pct(f2)}</span></div>
+      <div class="h-2 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-cyan-400" style="width:${f2*100}%"></div></div>
+    </div>`;
+  }).join('');
+}
+
+const statusColor = {true_positive:'border-emerald-400', true_negative:'border-slate-600', false_negative:'border-amber-400', false_positive:'border-red-400'};
+const statusLabel = {true_positive:'FISH ✓', true_negative:'NO FISH ✓', false_negative:'MISSED', false_positive:'FALSE ALARM'};
+
+function renderGallery(filter){
+  const grid = document.getElementById('galleryGrid');
+  const items = filter==='all' ? galleryData : galleryData.filter(e=>e.status===filter);
+  grid.innerHTML = items.slice(0,60).map(e=>`
+    <div class="relative rounded-lg overflow-hidden border-2 ${statusColor[e.status]}">
+      <img src="/test_images/${e.file_name}" class="w-full h-24 object-cover" loading="lazy"/>
+      <div class="absolute bottom-0 inset-x-0 bg-black/70 text-[10px] px-1.5 py-1">${statusLabel[e.status]}</div>
+    </div>`).join('');
+}
+
+document.getElementById('galleryFilters').addEventListener('click', (e)=>{
+  const btn = e.target.closest('button'); if(!btn) return;
+  [...document.querySelectorAll('#galleryFilters button')].forEach(b=>{b.classList.remove('border-cyan-400','text-cyan-400'); b.classList.add('border-slate-600','text-slate-300');});
+  btn.classList.add('border-cyan-400','text-cyan-400'); btn.classList.remove('border-slate-600','text-slate-300');
+  renderGallery(btn.dataset.f);
+});
+
+loadAll();
+</script>
+</body>
+</html>
