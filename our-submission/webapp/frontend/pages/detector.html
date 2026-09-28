@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Live AI Detector — DeepVision</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="min-h-screen">
+
+<nav class="fixed top-0 inset-x-0 z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></div>
+      <span class="font-bold tracking-wide text-sm">DEEP<span class="text-cyan-400">VISION</span></span>
+    </a>
+    <div class="hidden md:flex gap-8">
+      <a href="/detector" class="navlink active">AI DETECTOR</a>
+      <a href="/insights" class="navlink">INSIGHTS</a>
+      <a href="/game" class="navlink">GAME</a>
+      <a href="/impact" class="navlink">IMPACT</a>
+      <a href="/roadmap" class="navlink">ROADMAP</a>
+      <a href="/tech" class="navlink">TECH</a>
+    </div>
+    <a href="/detector" class="text-xs font-bold bg-cyan-400 text-slate-900 px-4 py-2 rounded-lg">RUN LIVE DEMO</a>
+  </div>
+</nav>
+
+<section class="px-6 pt-28 pb-20 max-w-6xl mx-auto">
+  <div class="flex items-center gap-3 mb-2"><span class="badge badge-measured">LIVE · REAL INFERENCE</span></div>
+  <h2 class="text-3xl font-black mb-2">Live AI Detector</h2>
+  <p class="text-slate-400 mb-8 max-w-2xl">Upload any underwater frame. This calls our real trained model (YOLOv8n, fine-tuned on the TalTech fish dataset) running locally — not a canned response.</p>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <div>
+      <div id="dropzone" class="dropzone rounded-2xl p-10 text-center cursor-pointer">
+        <input type="file" id="fileInput" accept="image/*" class="hidden" />
+        <div class="text-slate-400">Drag & drop an image, or click to choose</div>
+        <div class="text-xs text-slate-600 mt-2">PNG / JPG</div>
+      </div>
+      <div class="mt-4 flex gap-3">
+        <button id="tryFishBtn" class="text-xs border border-slate-600 rounded-lg px-3 py-2 text-slate-300">Try a real fish frame</button>
+        <button id="tryNoFishBtn" class="text-xs border border-slate-600 rounded-lg px-3 py-2 text-slate-300">Try a real no-fish frame</button>
+      </div>
+    </div>
+    <div class="card p-5 min-h-[280px] flex flex-col items-center justify-center relative" id="resultPanel">
+      <div class="text-slate-500 text-sm" id="resultPlaceholder">Annotated result will appear here</div>
+      <img id="resultImg" class="hidden max-h-72 rounded-lg" />
+      <div id="resultMeta" class="mt-4 w-full text-sm"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="px-6 py-10 text-center text-xs text-slate-600">Built on the real TalTech Fish vs Debris Hackathon dataset · EIT Water Hackathon Munich 2026</footer>
+
+<script src="/static/common.js"></script>
+<script>
+let galleryData = [];
+fetch('/api/gallery').then(r=>r.json()).then(g=>galleryData=g);
+
+const dropzone = document.getElementById('dropzone');
+const fileInput = document.getElementById('fileInput');
+dropzone.addEventListener('click', ()=>fileInput.click());
+dropzone.addEventListener('dragover', e=>{e.preventDefault(); dropzone.classList.add('drag');});
+dropzone.addEventListener('dragleave', ()=>dropzone.classList.remove('drag'));
+dropzone.addEventListener('drop', e=>{e.preventDefault(); dropzone.classList.remove('drag'); if(e.dataTransfer.files[0]) runInference(e.dataTransfer.files[0]);});
+fileInput.addEventListener('change', ()=>{ if(fileInput.files[0]) runInference(fileInput.files[0]); });
+
+async function runInference(file){
+  document.getElementById('resultPlaceholder').textContent = 'Running real inference…';
+  document.getElementById('resultPlaceholder').classList.remove('hidden');
+  document.getElementById('resultImg').classList.add('hidden');
+  const fd = new FormData(); fd.append('file', file);
+  const res = await fetch('/api/predict', {method:'POST', body: fd});
+  const data = await res.json();
+  document.getElementById('resultPlaceholder').classList.add('hidden');
+  const img = document.getElementById('resultImg');
+  img.src = data.annotated_url + '?t=' + Date.now();
+  img.classList.remove('hidden');
+  const meta = document.getElementById('resultMeta');
+  meta.innerHTML = `
+    <div class="flex justify-between"><span class="text-slate-400">Result</span><span class="font-bold ${data.fish_count? 'text-cyan-400':'text-slate-300'}">${data.fish_count? 'FISH ('+data.fish_count+')':'NO FISH'}</span></div>
+    <div class="flex justify-between mt-1"><span class="text-slate-400">Inference time</span><span>${data.inference_ms} ms</span></div>
+    ${data.detections.map((d,i)=>`<div class="flex justify-between text-xs text-slate-400 mt-1"><span>Fish #${i+1}</span><span>${(d.confidence*100).toFixed(1)}%</span></div>`).join('')}
+  `;
+}
+
+async function tryReal(status){
+  if(!galleryData.length){ galleryData = await fetch('/api/gallery').then(r=>r.json()); }
+  const pool = galleryData.filter(e=> status==='fish' ? e.ground_truth_has_fish : !e.ground_truth_has_fish);
+  const pick = pool[Math.floor(Math.random()*pool.length)];
+  const url = `/test_images/${pick.file_name}`;
+  const blob = await (await fetch(url)).blob();
+  const file = new File([blob], pick.file_name, {type: blob.type});
+  runInference(file);
+}
+document.getElementById('tryFishBtn').addEventListener('click', ()=>tryReal('fish'));
+document.getElementById('tryNoFishBtn').addEventListener('click', ()=>tryReal('nofish'));
+</script>
+</body>
+</html>

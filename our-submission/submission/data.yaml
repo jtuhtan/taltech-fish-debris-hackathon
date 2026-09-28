@@ -1,0 +1,8 @@
+path: /Users/hinata_shoyo/Desktop/ETH/Data/TalTech-Fish-Debris-Hackathon-v1.0.0
+train: images/train
+val: images/validation
+test: images/test
+
+nc: 1
+names:
+  0: fish

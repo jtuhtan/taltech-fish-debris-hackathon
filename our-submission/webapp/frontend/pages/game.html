@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fish or Not — DeepVision</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="min-h-screen">
+
+<nav class="fixed top-0 inset-x-0 z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></div>
+      <span class="font-bold tracking-wide text-sm">DEEP<span class="text-cyan-400">VISION</span></span>
+    </a>
+    <div class="hidden md:flex gap-8">
+      <a href="/detector" class="navlink">AI DETECTOR</a>
+      <a href="/insights" class="navlink">INSIGHTS</a>
+      <a href="/game" class="navlink active">GAME</a>
+      <a href="/impact" class="navlink">IMPACT</a>
+      <a href="/roadmap" class="navlink">ROADMAP</a>
+      <a href="/tech" class="navlink">TECH</a>
+    </div>
+    <a href="/detector" class="text-xs font-bold bg-cyan-400 text-slate-900 px-4 py-2 rounded-lg">RUN LIVE DEMO</a>
+  </div>
+</nav>
+
+<section class="px-6 pt-28 pb-20 max-w-4xl mx-auto text-center">
+  <span class="badge badge-measured">REAL IMAGES FROM THE DATASET</span>
+  <h2 class="text-3xl font-black mt-2 mb-2">Fish or Not?</h2>
+  <p class="text-slate-400 mb-8">Underwater scenes are difficult — visual clutter can look biological. Can you out-guess the model on genuinely hard frames?</p>
+  <div class="card p-6">
+    <div id="gameImgWrap" class="relative mx-auto max-w-md inline-block">
+      <img id="gameImg" class="rounded-lg w-full block" />
+      <div id="boxLayer" class="absolute inset-0 pointer-events-none"></div>
+    </div>
+    <div id="gamePrompt" class="mt-6 text-lg font-bold">Is there a fish in this frame?</div>
+    <div class="mt-4 flex gap-4 justify-center">
+      <button id="gameYes" class="bg-cyan-400 text-slate-900 font-bold px-6 py-2.5 rounded-xl">YES, FISH</button>
+      <button id="gameNo" class="border border-slate-600 font-bold px-6 py-2.5 rounded-xl">NO FISH</button>
+    </div>
+    <div id="gameFeedback" class="mt-4 text-sm min-h-[24px]"></div>
+    <div class="mt-6 flex justify-center gap-8 text-sm">
+      <div>YOU <span class="font-black text-cyan-400" id="scoreYou">0</span></div>
+      <div>AI <span class="font-black text-slate-300" id="scoreAI">0</span></div>
+      <div id="streakBadge" class="text-amber-400 font-bold"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="px-6 py-10 text-center text-xs text-slate-600">Built on the real TalTech Fish vs Debris Hackathon dataset · EIT Water Hackathon Munich 2026</footer>
+
+<script src="/static/common.js"></script>
+<script>
+let gameData = {false_positives:[], true_negatives:[]};
+let galleryData = [];
+let gamePool = [];
+let scoreYou = 0, scoreAI = 0, streak = 0;
+let currentRound = null;
+
+async function loadGame(){
+  const [g, gal] = await Promise.all([
+    fetch('/api/game').then(r=>r.json()),
+    fetch('/api/gallery').then(r=>r.json()),
+  ]);
+  gameData = g; galleryData = gal;
+  gamePool = [...gameData.false_positives.map(e=>({...e})), ...gameData.true_negatives.map(e=>({...e}))];
+  const fishFrames = galleryData.filter(e=>e.status==='true_positive');
+  gamePool = [...gamePool, ...fishFrames];
+  nextRound();
+}
+
+function nextRound(){
+  if(!gamePool.length) return;
+  currentRound = gamePool[Math.floor(Math.random()*gamePool.length)];
+  document.getElementById('gameImg').src = `/test_images/${currentRound.file_name}`;
+  document.getElementById('gameFeedback').textContent = '';
+  document.getElementById('boxLayer').innerHTML = '';
+}
+
+function drawBoxes(userCorrect){
+  const layer = document.getElementById('boxLayer');
+  layer.innerHTML = '';
+  const img = document.getElementById('gameImg');
+  const w = currentRound.width, h = currentRound.height;
+  if(!w || !h) return;
+
+  const color = userCorrect ? '#34d399' : '#f87171';
+  const boxes = currentRound.ground_truth_boxes || [];
+
+  if(boxes.length){
+    boxes.forEach(([x,y,bw,bh])=>{
+      const box = document.createElement('div');
+      box.style.position = 'absolute';
+      box.style.left = (x / w * 100) + '%';
+      box.style.top = (y / h * 100) + '%';
+      box.style.width = (bw / w * 100) + '%';
+      box.style.height = (bh / h * 100) + '%';
+      box.style.border = `2px solid ${color}`;
+      box.style.borderRadius = '4px';
+      box.style.boxShadow = `0 0 12px ${color}88`;
+      const tag = document.createElement('div');
+      tag.textContent = 'FISH';
+      tag.style.position = 'absolute';
+      tag.style.bottom = '100%';
+      tag.style.left = '0';
+      tag.style.background = color;
+      tag.style.color = '#04141d';
+      tag.style.fontSize = '10px';
+      tag.style.fontWeight = '700';
+      tag.style.padding = '1px 5px';
+      tag.style.borderRadius = '3px';
+      box.appendChild(tag);
+      layer.appendChild(box);
+    });
+  } else {
+    // no ground-truth fish: highlight the whole frame instead of a box
+    const ring = document.createElement('div');
+    ring.style.position = 'absolute';
+    ring.style.inset = '0';
+    ring.style.border = `3px solid ${color}`;
+    ring.style.borderRadius = '10px';
+    ring.style.boxShadow = `0 0 16px ${color}66 inset`;
+    layer.appendChild(ring);
+  }
+}
+
+function answerGame(userSaysFish){
+  if(!currentRound) return;
+  const truth = currentRound.ground_truth_has_fish;
+  const aiSaidFish = currentRound.predicted_has_fish;
+  const userCorrect = userSaysFish === truth;
+  const aiCorrect = aiSaidFish === truth;
+  if(userCorrect){ scoreYou++; streak++; } else { streak = 0; }
+  if(aiCorrect) scoreAI++;
+  document.getElementById('scoreYou').textContent = scoreYou;
+  document.getElementById('scoreAI').textContent = scoreAI;
+  document.getElementById('gameFeedback').innerHTML = `Ground truth: <b>${truth?'FISH':'NO FISH'}</b> · You: ${userCorrect?'correct':'wrong'} · AI: ${aiCorrect?'correct':'wrong'}`;
+  drawBoxes(userCorrect);
+  const streakBadge = document.getElementById('streakBadge');
+  streakBadge.textContent = streak>=10?'UNDERWATER INTELLIGENCE':streak>=5?'ECOLOGY DETECTIVE':streak>=3?'VISION EXPERT':'';
+  setTimeout(nextRound, 1800);
+}
+document.getElementById('gameYes').addEventListener('click', ()=>answerGame(true));
+document.getElementById('gameNo').addEventListener('click', ()=>answerGame(false));
+
+loadGame();
+</script>
+</body>
+</html>
